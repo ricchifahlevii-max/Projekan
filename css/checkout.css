@@ -1,0 +1,1083 @@
+ /* UMUM */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(18, 21, 26);
+    color: white;
+    min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER CHECKOUT */
+
+.headerCheckout {
+    width: 100%;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(18, 21, 26);
+    border-bottom: 1px solid rgb(45, 70, 75);
+}
+
+.logoBuku {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logoBuku span {
+    color: cyan;
+}
+
+.tombolHome {
+    padding: 11px 18px;
+    color: white;
+    background-color: rgb(32, 45, 55);
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tombolHome:hover {
+    color: rgb(18, 21, 26);
+    background-color: lightcyan;
+}
+
+/* JUDUL CHECKOUT */
+
+.checkout {
+    width: 88%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+.judulCheckout {
+    padding: 55px 0 30px;
+}
+
+.judulCheckout p {
+    margin-bottom: 8px;
+    color: cadetblue;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.judulCheckout h1 {
+    margin-bottom: 8px;
+    font-size: 42px;
+    line-height: 1.1;
+}
+
+.judulCheckout span {
+    color: lightgray;
+    font-size: 15px;
+}
+
+/* ISI CHECKOUT */
+
+.isiCheckout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* DAFTAR PESANAN */
+
+.daftarPesanan {
+    min-width: 0;
+    padding: 28px;
+    background-color: rgb(32, 38, 48);
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 15px;
+}
+
+.judulPesanan {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.labelPesanan {
+    margin-bottom: 6px;
+    color: cadetblue;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.judulPesanan h2 {
+    font-size: 23px;
+}
+
+.judulPesanan > span {
+    padding: 8px 12px;
+    color: lightcyan;
+    background-color: rgb(25, 55, 60);
+    border: 1px solid rgb(55, 95, 100);
+    border-radius: 20px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* DAFTAR BUKU */
+
+.daftarCheckout {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pesanCheckout {
+    padding: 50px 20px;
+    color: lightgray;
+    text-align: center;
+}
+
+/* ITEM CHECKOUT */
+
+.itemCheckout {
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 165px 1fr;
+    gap: 22px;
+    background-color: rgb(24, 29, 37);
+    border: 1px solid rgb(55, 75, 82);
+    border-radius: 12px;
+}
+
+/* GAMBAR BUKU */
+
+.gambarCheckout {
+    width: 165px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(18, 21, 26);
+    border-radius: 8px;
+    border: 1px solid rgb(55, 75, 82);
+}
+
+.gambarCheckout img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.tanpaGambar {
+    color: lightgray;
+    font-size: 45px;
+}
+
+/* INFORMASI BUKU */
+
+.infoCheckout {
+    min-width: 0;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoCheckout h3 {
+    margin-bottom: 8px;
+    color: white;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+.infoCheckout > p {
+    margin-bottom: 5px;
+    color: lightgray;
+    font-size: 14px;
+}
+
+.hargaCheckout {
+    margin-top: 10px;
+    color: cyan !important;
+    font-size: 19px !important;
+    font-weight: bold;
+}
+
+/* JUMLAH BUKU */
+
+.jumlahBuku {
+    margin-top: auto;
+    padding-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.jumlahBuku button {
+    width: 32px;
+    height: 32px;
+    color: white;
+    background-color: rgb(45, 55, 65);
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.jumlahBuku button:hover {
+    color: rgb(18, 21, 26);
+    background-color: cyan;
+}
+
+.jumlahBuku span {
+    min-width: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.jumlahBuku .tombolHapus {
+    width: auto;
+    height: auto;
+    margin-left: 5px;
+    padding: 7px 11px;
+    color: lightcoral;
+    background-color: transparent;
+    border: 1px solid rgb(100, 65, 65);
+    font-size: 12px;
+}
+
+.jumlahBuku .tombolHapus:hover {
+    color: white;
+    background-color: rgb(120, 60, 60);
+}
+
+/* FORM PEMESANAN */
+
+.formPesanan {
+    padding: 28px;
+    background-color: rgb(32, 38, 48);
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 15px;
+}
+
+.judulForm {
+    margin-bottom: 25px;
+}
+
+.judulForm h2 {
+    margin-bottom: 7px;
+    font-size: 23px;
+}
+
+.judulForm > span {
+    color: lightgray;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* FORM */
+
+.formGrup {
+    margin-bottom: 17px;
+}
+
+.formGrup label {
+    display: block;
+    margin-bottom: 7px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.formGrup input,
+.formGrup textarea,
+.formGrup select {
+    width: 100%;
+    padding: 13px 14px;
+    color: white;
+    background-color: rgb(18, 21, 26);
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 8px;
+    outline: none;
+    font-size: 13px;
+}
+
+.formGrup input:focus,
+.formGrup textarea:focus,
+.formGrup select:focus {
+    border-color: cyan;
+}
+
+.formGrup input::placeholder,
+.formGrup textarea::placeholder {
+    color: rgb(120, 130, 140);
+}
+
+.formGrup textarea {
+    height: 95px;
+    resize: vertical;
+}
+
+.formGrup select option {
+    color: white;
+    background-color: rgb(18, 21, 26);
+}
+
+/* RINGKASAN */
+
+.ringkasan {
+    margin-top: 22px;
+    padding: 18px 0 0;
+    border-top: 1px solid rgb(55, 75, 82);
+}
+
+.ringkasan > div {
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: lightgray;
+    font-size: 14px;
+}
+
+.ringkasan strong {
+    color: white;
+}
+
+.ringkasan .total {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgb(55, 75, 82);
+    color: white;
+    font-size: 18px;
+}
+
+.ringkasan .total strong {
+    color: cyan;
+    font-size: 20px;
+}
+
+/* TOMBOL BAYAR */
+
+.tombolBayar {
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    color: rgb(18, 21, 26);
+    background-color: cyan;
+    border: 1px solid cyan;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tombolBayar:hover {
+    background-color: lightcyan;
+}
+
+/* PESANAN BERHASIL */
+
+.pesananBerhasil {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(18, 21, 26, 0.96);
+    z-index: 1000;
+}
+
+.kotakBerhasil {
+    width: 100%;
+    max-width: 480px;
+    padding: 45px 35px;
+    text-align: center;
+    background-color: rgb(32, 38, 48);
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 16px;
+}
+
+.ikonBerhasil {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: lightgreen;
+    border: 2px solid lightgreen;
+    border-radius: 50%;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.labelBerhasil {
+    margin-bottom: 8px;
+    color: cadetblue;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.kotakBerhasil h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.kotakBerhasil > p:not(.labelBerhasil) {
+    margin-bottom: 25px;
+    color: lightgray;
+    font-size: 14px;
+}
+
+.kotakBerhasil a {
+    display: inline-block;
+    padding: 12px 22px;
+    color: rgb(18, 21, 26);
+    background-color: cyan;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.kotakBerhasil a:hover {
+    background-color: lightcyan;
+}
+
+/* MODE TERANG */
+
+body.light-mode {
+    color: black;
+    background-color: white;
+}
+
+body.light-mode .headerCheckout {
+    background-color: white;
+    border-color: lightgray;
+}
+
+body.light-mode .logoBuku {
+    color: black;
+}
+
+body.light-mode .logoBuku span {
+    color: blue;
+}
+
+body.light-mode .tombolHome {
+    color: navy;
+    background-color: whitesmoke;
+    border-color: lightgray;
+}
+
+body.light-mode .tombolHome:hover {
+    color: white;
+    background-color: blue;
+}
+
+body.light-mode .judulCheckout span,
+body.light-mode .judulForm > span {
+    color: gray;
+}
+
+body.light-mode .daftarPesanan,
+body.light-mode .formPesanan {
+    background-color: whitesmoke;
+    border-color: lightgray;
+}
+
+body.light-mode .judulPesanan > span {
+    color: navy;
+    background-color: lightcyan;
+    border-color: lightgray;
+}
+
+body.light-mode .itemCheckout {
+    background-color: white;
+    border-color: lightgray;
+}
+
+body.light-mode .gambarCheckout {
+    background-color: whitesmoke;
+    border-color: lightgray;
+}
+
+body.light-mode .infoCheckout h3 {
+    color: black;
+}
+
+body.light-mode .infoCheckout > p {
+    color: gray;
+}
+
+body.light-mode .hargaCheckout {
+    color: blue !important;
+}
+
+body.light-mode .jumlahBuku button {
+    color: navy;
+    background-color: whitesmoke;
+    border-color: lightgray;
+}
+
+body.light-mode .jumlahBuku button:hover {
+    color: white;
+    background-color: blue;
+}
+
+body.light-mode .formGrup label {
+    color: black;
+}
+
+body.light-mode .formGrup input,
+body.light-mode .formGrup textarea,
+body.light-mode .formGrup select {
+    color: black;
+    background-color: white;
+    border-color: lightgray;
+}
+
+body.light-mode .formGrup select option {
+    color: black;
+    background-color: white;
+}
+
+body.light-mode .ringkasan {
+    border-color: lightgray;
+}
+
+body.light-mode .ringkasan > div {
+    color: gray;
+}
+
+body.light-mode .ringkasan strong,
+body.light-mode .ringkasan .total {
+    color: black;
+}
+
+body.light-mode .ringkasan .total {
+    border-color: lightgray;
+}
+
+body.light-mode .ringkasan .total strong {
+    color: blue;
+}
+
+body.light-mode .kotakBerhasil {
+    background-color: white;
+    border-color: lightgray;
+}
+
+/* LAPTOP */
+
+@media (min-width: 951px) {
+    .isiCheckout {
+        grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    .formPesanan {
+        position: sticky;
+        top: 20px;
+    }
+}
+
+/* TABLET */
+
+@media (min-width: 601px) and (max-width: 950px) {
+    .checkout {
+        width: 90%;
+    }
+
+    .isiCheckout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .formPesanan {
+        width: 100%;
+    }
+
+    .itemCheckout {
+        grid-template-columns: 150px 1fr;
+    }
+
+    .gambarCheckout {
+        width: 150px;
+        height: 215px;
+    }
+}
+
+/* HP */
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .headerCheckout {
+        padding: 15px 20px;
+    }
+
+    .logoBuku {
+        font-size: 21px;
+    }
+
+    .tombolHome {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .checkout {
+        width: auto;
+        margin: 0 20px;
+    }
+
+    .judulCheckout {
+        padding: 35px 0 25px;
+    }
+
+    .judulCheckout h1 {
+        font-size: 32px;
+    }
+
+    .daftarPesanan,
+    .formPesanan {
+        padding: 20px;
+    }
+
+    .judulPesanan {
+        align-items: flex-start;
+    }
+
+    .judulPesanan h2,
+    .judulForm h2 {
+        font-size: 20px;
+    }
+
+    .itemCheckout {
+        grid-template-columns: 120px 1fr;
+        gap: 15px;
+        padding: 14px;
+    }
+
+    .gambarCheckout {
+        width: 120px;
+        height: 175px;
+    }
+
+    .infoCheckout h3 {
+        font-size: 16px;
+    }
+
+    .infoCheckout > p {
+        font-size: 13px;
+    }
+
+    .hargaCheckout {
+        font-size: 16px !important;
+    }
+
+    .jumlahBuku {
+        flex-wrap: wrap;
+    }
+
+    .formGrup input,
+    .formGrup textarea,
+    .formGrup select {
+        padding: 12px;
+    }
+
+    .pesananBerhasil {
+        padding: 20px;
+    }
+
+    .kotakBerhasil {
+        padding: 35px 25px;
+    }
+}
+
+/* HP KECIL */
+
+@media (min-width: 241px) and (max-width: 400px) {
+    .headerCheckout {
+        padding: 13px 15px;
+    }
+
+    .logoBuku {
+        font-size: 19px;
+    }
+
+    .tombolHome {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .checkout {
+        width: auto;
+        margin: 0 15px;
+    }
+
+    .judulCheckout {
+        padding: 30px 0 20px;
+    }
+
+    .judulCheckout p {
+        font-size: 11px;
+    }
+
+    .judulCheckout h1 {
+        font-size: 28px;
+    }
+
+    .judulCheckout span {
+        font-size: 13px;
+    }
+
+    .daftarPesanan,
+    .formPesanan {
+        padding: 17px;
+    }
+
+    .judulPesanan {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .judulPesanan h2,
+    .judulForm h2 {
+        font-size: 19px;
+    }
+
+    .itemCheckout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 13px;
+    }
+
+    .gambarCheckout {
+        width: 145px;
+        height: 205px;
+        margin: 0 auto;
+    }
+
+    .infoCheckout {
+        text-align: left;
+    }
+
+    .infoCheckout h3 {
+        font-size: 16px;
+    }
+
+    .infoCheckout > p {
+        font-size: 12px;
+    }
+
+    .hargaCheckout {
+        font-size: 16px !important;
+    }
+
+    .jumlahBuku {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .jumlahBuku .tombolHapus {
+        margin-left: 0;
+    }
+
+    .formGrup {
+        margin-bottom: 14px;
+    }
+
+    .formGrup input,
+    .formGrup textarea,
+    .formGrup select {
+        padding: 11px;
+        font-size: 12px;
+    }
+
+    .ringkasan > div {
+        font-size: 12px;
+    }
+
+    .ringkasan .total {
+        font-size: 16px;
+    }
+
+    .ringkasan .total strong {
+        font-size: 18px;
+    }
+
+    .tombolBayar {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .pesananBerhasil {
+        padding: 15px;
+    }
+
+    .kotakBerhasil {
+        padding: 30px 18px;
+    }
+
+    .kotakBerhasil h2 {
+        font-size: 23px;
+    }
+}
+
+/* SMARTWATCH */
+
+@media (max-width: 240px) {
+    body {
+        font-size: 11px;
+    }
+
+    .headerCheckout {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .logoBuku {
+        font-size: 15px;
+    }
+
+    .tombolHome {
+        padding: 6px 8px;
+        font-size: 9px;
+        border-radius: 5px;
+    }
+
+    .checkout {
+        width: auto;
+        margin: 0 8px;
+        padding-bottom: 30px;
+    }
+
+    .judulCheckout {
+        padding: 20px 0 15px;
+    }
+
+    .judulCheckout p {
+        margin-bottom: 5px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .judulCheckout h1 {
+        margin-bottom: 5px;
+        font-size: 21px;
+    }
+
+    .judulCheckout span {
+        font-size: 10px;
+    }
+
+    .isiCheckout {
+        gap: 10px;
+    }
+
+    .daftarPesanan,
+    .formPesanan {
+        padding: 11px;
+        border-radius: 9px;
+    }
+
+    .judulPesanan {
+        margin-bottom: 13px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .labelPesanan {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .judulPesanan h2,
+    .judulForm h2 {
+        font-size: 16px;
+    }
+
+    .judulPesanan > span {
+        padding: 5px 8px;
+        font-size: 9px;
+    }
+
+    .daftarCheckout {
+        gap: 10px;
+    }
+
+    .itemCheckout {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 9px;
+        border-radius: 8px;
+    }
+
+    .gambarCheckout {
+        width: 100px;
+        height: 145px;
+        margin: 0 auto;
+        border-radius: 6px;
+    }
+
+    .tanpaGambar {
+        font-size: 25px;
+    }
+
+    .infoCheckout {
+        padding: 0;
+    }
+
+    .infoCheckout h3 {
+        margin-bottom: 5px;
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .infoCheckout > p {
+        margin-bottom: 3px;
+        font-size: 10px;
+    }
+
+    .hargaCheckout {
+        margin-top: 6px;
+        font-size: 13px !important;
+    }
+
+    .jumlahBuku {
+        padding-top: 10px;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .jumlahBuku button {
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+    }
+
+    .jumlahBuku span {
+        min-width: 23px;
+        font-size: 11px;
+    }
+
+    .jumlahBuku .tombolHapus {
+        margin-left: 0;
+        padding: 5px 7px;
+        font-size: 9px;
+    }
+
+    .judulForm {
+        margin-bottom: 15px;
+    }
+
+    .judulForm > span {
+        font-size: 10px;
+    }
+
+    .formGrup {
+        margin-bottom: 11px;
+    }
+
+    .formGrup label {
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+
+    .formGrup input,
+    .formGrup textarea,
+    .formGrup select {
+        padding: 9px;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+
+    .formGrup textarea {
+        height: 70px;
+    }
+
+    .ringkasan {
+        margin-top: 15px;
+        padding-top: 12px;
+    }
+
+    .ringkasan > div {
+        margin-bottom: 7px;
+        font-size: 10px;
+    }
+
+    .ringkasan .total {
+        margin-top: 10px;
+        padding-top: 10px;
+        font-size: 13px;
+    }
+
+    .ringkasan .total strong {
+        font-size: 14px;
+    }
+
+    .tombolBayar {
+        margin-top: 14px;
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+
+    .pesananBerhasil {
+        padding: 10px;
+    }
+
+    .kotakBerhasil {
+        padding: 22px 12px;
+        border-radius: 10px;
+    }
+
+    .ikonBerhasil {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 12px;
+        font-size: 23px;
+    }
+
+    .labelBerhasil {
+        font-size: 8px;
+    }
+
+    .kotakBerhasil h2 {
+        font-size: 18px;
+    }
+
+    .kotakBerhasil > p:not(.labelBerhasil) {
+        margin-bottom: 17px;
+        font-size: 10px;
+    }
+
+    .kotakBerhasil a {
+        padding: 9px 13px;
+        font-size: 10px;
+    }
+}

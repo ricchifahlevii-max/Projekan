@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Buku - BukaBuku</title>
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/headerdetail.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body class="dark-mode">
+
+    <!-- HEADER DAN NAVIGASI UTAMA -->
+    <header class="header">
+        <!-- Logo BukaBuku -->
+        <a href="index.html" class="logoBuku">Buka<span>Buku</span></a>
+
+        <div class="areaKanan">
+            <!-- Tombol untuk mengganti mode terang dan gelap -->
+            <button class="tombolMode" id="tombolMode" title="Ganti mode">☾</button>
+
+            <!--  Menu navigasi halaman website -->
+            <nav id="navigasi">
+                <ol class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li><a href="detail.html" class="aktif">Detail Buku</a></li>
+                    <li><a href="keranjang.html">Keranjang</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ol>
+
+                <!-- Tombol untuk masuk dan membuat akun -->
+                <div class="tombolAkun">
+                    <a href="signin.html" class="tombolMasuk">Sign In</a>
+                    <a href="signup.html" class="tombolDaftar">Sign Up</a>
+                </div>
+            </nav>
+
+            <!--  Tombol menu burger untuk tampilan HP -->
+            <button class="tombolMenu" id="tombolMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ISI UTAMA HALAMAN -->
+    <main>
+
+        <!-- DETAIL BUKU: INFORMASI LENGKAP BUKU YANG DIPILIH -->
+        <section class="detailBuku" id="detailBuku">
+            <!-- Bagian untuk menampilkan sampul buku -->
+            <div class="gambarWrapper">
+                <div class="gambarDetail" id="gambarBuku"></div>
+            </div>
+
+            <!-- Bagian untuk menampilkan informasi buku -->
+            <div class="isiDetail">
+                <p class="labelDetail">DETAIL BUKU</p>
+                <h1 id="judulBuku">Memuat buku...</h1>
+                <p class="penulisDetail" id="penulisBuku">-</p>
+
+                <!-- Informasi singkat: kategori, genre, dan rating -->
+                <div class="infoDetail">
+                    <div><strong id="kategoriBuku">-</strong><span>Kategori</span></div>
+                    <div><strong id="genreBuku">-</strong><span>Genre</span></div>
+                    <div><strong id="ratingBuku">-</strong><span>Rating</span></div>
+                </div>
+
+                <!-- Data lengkap buku -->
+                <div class="dataBuku">
+                    <p><strong>Penerbit:</strong><span id="penerbitBuku">-</span></p>
+                    <p><strong>Tahun:</strong><span id="tahunBuku">-</span></p>
+                    <p><strong>ISBN:</strong><span id="isbnBuku">-</span></p>
+                    <p><strong>Stok:</strong><span id="stokBuku">-</span></p>
+                </div>
+
+                <!-- Harga buku -->
+                <div class="hargaDetail" id="hargaBuku">Rp 0</div>
+
+                <!-- Deskripsi buku -->
+                <div class="deskripsiDetail">
+                    <h2>Deskripsi</h2>
+                    <p id="deskripsiBuku">Belum ada deskripsi buku.</p>
+                </div>
+
+                <!-- Tombol untuk melakukan tindakan pada buku -->
+                <div class="aksiBuku">
+                    <button type="button" id="tombolKeranjang" class="tombolKeranjang">Masukkan Keranjang</button>
+                    <a href="#" id="tombolCheckout" class="tombolCheckout">Checkout Sekarang</a>
+                    <a href="katalog.html" class="tombolKembali">Kembali ke Katalog</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUKU TIDAK DITEMUKAN -->
+        <section class="bukuTidakDitemukan" id="bukuTidakDitemukan">
+            <h2>Buku Tidak Ditemukan</h2>
+            <p>Data buku yang kamu cari tidak tersedia.</p>
+            <a href="katalog.html">Kembali ke Katalog</a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: INFORMASI DAN TAUTAN WEBSITE -->
+    <footer class="footer">
+        <div class="isiFooter">
+
+            <!-- Informasi singkat tentang BukaBuku -->
+            <div class="bagianFooter tentangBuku">
+                <a href="index.html" class="logoFooter">Buka<span>Buku</span></a>
+                <p>BukaBuku adalah tempat untuk menemukan berbagai macam buku yang sesuai dengan kebutuhan dan minatmu.
+                </p>
+                <div class="sosialMedia">
+                    <a href="https://www.facebook.com/profile.php?id=61550623599505">Facebook</a>
+                    <a href="https://www.instagram.com/_rcciiii/">Instagram</a>
+                    <a href="https://www.tiktok.com/@ciif06">TikTok</a>
+                    <a href="https://www.youtube.com/results?search_query=windah+basudara">YouTube</a>
+                </div>
+            </div>
+
+            <!-- Daftar menu halaman website -->
+            <div class="bagianFooter">
+                <h3>Menu</h3>
+                <a href="index.html">Home</a>
+                <a href="katalog.html">Katalog</a>
+                <a href="detail.html">Detail Buku</a>
+                <a href="keranjang.html">Keranjang</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+
+            <!-- Daftar bantuan untuk pengguna -->
+            <div class="bagianFooter">
+                <h3>Bantuan</h3>
+                <a href="#">Cara Belanja</a>
+                <a href="#">Pembayaran</a>
+                <a href="#">Pengiriman</a>
+                <a href="#">Pengembalian</a>
+                <a href="#">FAQ</a>
+            </div>
+
+            <!-- Informasi tambahan tentang website -->
+            <div class="bagianFooter">
+                <h3>Tentang BukaBuku</h3>
+                <a href="#">Tentang Kami</a>
+                <a href="#">Kontak</a>
+                <a href="#">Kebijakan Privasi</a>
+                <a href="#">Syarat dan Ketentuan</a>
+            </div>
+
+            <!-- Informasi kontak BukaBuku -->
+            <div class="bagianFooter kontakFooter">
+                <h3>Hubungi Kami</h3>
+                <p>Bandung, Indonesia</p>
+                <p>bukabuku@gmail.com</p>
+                <p>0838-5198-8184</p>
+            </div>
+
+        </div>
+
+        <!-- Bagian paling bawah footer -->
+        <div class="bawahFooter">
+            <p>© 2026 BukaBuku. Semua hak cipta dilindungi.</p>
+            <div>
+                <a href="#">Privasi</a>
+                <a href="#">Ketentuan</a>
+                <a href="#">Bantuan</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk menjalankan fungsi halaman -->
+    <script src="js/akun.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+
+</html>

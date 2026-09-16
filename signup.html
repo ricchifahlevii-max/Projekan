@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - BukaBuku</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body class="dark-mode">
+    <!-- Tombol untuk mengganti mode terang dan gelap -->
+    <button id="tombolMode" class="tombolMode">☾</button>
+
+    <!-- HALAMAN SIGN UP: BAGIAN INFORMASI DAN FORM AKUN -->
+    <main class="halamanAuth">
+        <!-- Bagian logo dan sambutan -->
+        <section class="bagianLogo">
+            <div class="logo">BukaBuku</div>
+            <h1>Mulai Perjalanan Membacamu!</h1>
+            <p>Buat akun BukaBuku dan temukan berbagai buku favoritmu dengan mudah.</p>
+            <a href="index.html" class="tombolHome">Kembali ke Home</a>
+        </section>
+
+        <!-- Bagian form untuk akun pengguna -->
+        <section class="bagianForm">
+            <h2>Sign Up</h2>
+            <p class="teksKecil">Buat akun baru BukaBuku</p>
+
+            <!-- Form untuk mengisi data sign up pengguna -->
+            <form id="formSignup">
+                <!-- Satu kelompok input -->
+                <div class="inputGroup">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama lengkap">
+                    <small id="errorNama"></small>
+                </div>
+
+                <!-- Satu kelompok input -->
+                <div class="inputGroup">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Masukkan email">
+                    <small id="errorEmail"></small>
+                </div>
+
+                <!-- Satu kelompok input -->
+                <div class="inputGroup">
+                    <label for="password">Password</label>
+                    <div class="kotakPassword">
+                        <input type="password" id="password" placeholder="Masukkan password">
+                        <button type="button" id="tombolPassword">Lihat</button>
+                    </div>
+                    <small id="errorPassword"></small>
+                </div>
+
+                <!-- Satu kelompok input -->
+                <div class="inputGroup">
+                    <label for="konfirmasiPassword">Konfirmasi Password</label>
+                    <input type="password" id="konfirmasiPassword" placeholder="Ulangi password">
+                    <small id="errorKonfirmasi"></small>
+                </div>
+
+                <p id="pesanSignup" class="pesan"></p>
+                <button type="submit" class="tombolDaftar">Sign Up</button>
+            </form>
+
+            <p class="sudahAkun">Sudah punya akun? <a href="signin.html">Sign In</a></p>
+        </section>
+    </main>
+
+    <!-- JavaScript untuk proses sign up -->
+    <script src="js/signup.js"></script>
+</body>
+
+</html>

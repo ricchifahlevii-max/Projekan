@@ -1,0 +1,1143 @@
+/* UMUM */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(18, 21, 26);
+    color: white;
+}
+
+main {
+    min-height: 500px;
+}
+
+/* JUDUL KATALOG */
+
+.judulKatalog {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 70px 0 45px;
+}
+
+.judulBagian p:first-child {
+    margin-bottom: 8px;
+    color: cyan;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.judulBagian h1 {
+    margin-bottom: 12px;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.deskripsiKatalog {
+    max-width: 650px;
+    color: lightgray;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* FILTER */
+
+.bagianFilter {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto 50px;
+    padding: 28px;
+    background-color: rgb(29, 35, 44);
+    border: 1px solid rgb(60, 80, 90);
+    border-radius: 16px;
+}
+
+.bagianFilter .judulBagian {
+    margin-bottom: 22px;
+}
+
+.bagianFilter .judulBagian h2 {
+    font-size: 22px;
+}
+
+.daftarFilter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.kotakFilter {
+    flex: 1 1 250px;
+}
+
+.kotakFilter label {
+    display: block;
+    margin-bottom: 8px;
+    color: lightgray;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.kotakFilter select {
+    width: 100%;
+    padding: 13px 14px;
+    color: white;
+    background-color: rgb(18, 21, 26);
+    border: 1px solid rgb(65, 90, 100);
+    border-radius: 9px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.kotakFilter select:focus {
+    border-color: cyan;
+}
+
+.kotakFilter option {
+    color: white;
+    background-color: rgb(18, 21, 26);
+}
+
+.bagianReset {
+    margin-top: 18px;
+    text-align: right;
+}
+
+.tombolHapusFilter {
+    padding: 10px 17px;
+    color: lightgray;
+    background-color: rgb(38, 46, 56);
+    border: 1px solid rgb(70, 90, 100);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tombolHapusFilter:hover {
+    color: black;
+    background-color: cyan;
+    border-color: cyan;
+}
+
+/* DAFTAR BUKU */
+
+.bagianDaftarBuku {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto 70px;
+}
+
+.judulDaftarBuku {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.judulDaftarBuku .judulBagian h2 {
+    font-size: 27px;
+}
+
+.jumlahBuku {
+    color: lightgray;
+    font-size: 14px;
+}
+
+/* DAFTAR KARTU */
+
+.daftarBuku {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    align-items: flex-start;
+}
+
+/* KARTU BUKU */
+
+.kartuBuku {
+    width: calc(25% - 17px);
+    min-width: 220px;
+    overflow: hidden;
+    background-color: rgb(29, 35, 44);
+    border: 1px solid rgb(60, 80, 90);
+    border-radius: 14px;
+}
+
+.kartuBuku:hover {
+    border-color: cyan;
+}
+
+/* GAMBAR */
+
+.bagianGambar {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(23, 28, 35);
+    border-bottom: 1px solid rgb(55, 75, 85);
+}
+
+.bagianGambar img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+/* INFORMASI */
+
+.infoBuku {
+    padding: 16px;
+}
+
+.kategoriBuku {
+    margin-bottom: 6px;
+    color: cyan;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.infoBuku h3 {
+    min-height: 44px;
+    margin-bottom: 7px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.penulisBuku {
+    margin-bottom: 7px;
+    color: lightgray;
+    font-size: 14px;
+}
+
+.genreBuku {
+    min-height: 20px;
+    margin-bottom: 15px;
+    color: rgb(165, 175, 180);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* BAGIAN BAWAH KARTU */
+
+.bagianBawahBuku {
+    display: flex;
+    flex-direction: column;
+}
+
+.bagianHarga {
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.ratingBuku {
+    color: gold;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hargaBuku {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* TOMBOL DETAIL */
+
+.tombolDetail {
+    width: 100%;
+    padding: 12px;
+    display: block;
+    color: black;
+    background-color: cyan;
+    border: 1px solid cyan;
+    border-radius: 9px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tombolDetail:hover {
+    color: white;
+    background-color: cadetblue;
+    border-color: cadetblue;
+}
+
+/* TOMBOL KERANJANG */
+
+.tombolKeranjang {
+    width: 100%;
+    margin-top: 8px;
+    padding: 11px;
+    color: cyan;
+    background-color: transparent;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tombolKeranjang:hover {
+    color: black;
+    background-color: cyan;
+    border-color: cyan;
+}
+
+/* PESAN */
+
+.pesan {
+    width: 100%;
+    padding: 60px 20px;
+    color: lightgray;
+    text-align: center;
+}
+
+/* LIHAT LEBIH BANYAK */
+
+.bagianLihatLebihBanyak {
+    width: 100%;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.tombolLihatLebihBanyak {
+    padding: 12px 25px;
+    color: black;
+    background-color: cyan;
+    border: 1px solid cyan;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tombolLihatLebihBanyak:hover {
+    color: white;
+    background-color: cadetblue;
+    border-color: cadetblue;
+}
+
+/* BUKU TIDAK DITEMUKAN */
+
+.bukuTidakDitemukan {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto 70px;
+    padding: 50px 25px;
+    background-color: rgb(29, 35, 44);
+    border: 1px solid rgb(60, 80, 90);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.bukuTidakDitemukan h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.bukuTidakDitemukan p {
+    margin-bottom: 20px;
+    color: lightgray;
+    line-height: 1.6;
+}
+
+.tombolReset {
+    padding: 11px 20px;
+    color: black;
+    background-color: cyan;
+    border: 1px solid cyan;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* AJAKAN */
+
+.ajakanKatalog {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto 70px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: rgb(25, 45, 48);
+    border: 1px solid rgb(50, 100, 105);
+    border-radius: 16px;
+}
+
+.teksKecil {
+    margin-bottom: 8px;
+    color: cyan;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.ajakanKatalog h2 {
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+
+.ajakanKatalog div > p:last-child {
+    max-width: 650px;
+    color: lightgray;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tombolLihat {
+    padding: 13px 22px;
+    color: black;
+    background-color: cyan;
+    border: 1px solid cyan;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tombolLihat:hover {
+    color: white;
+    background-color: cadetblue;
+    border-color: cadetblue;
+}
+
+/* MODE TERANG */
+
+body.light-mode {
+    color: rgb(20, 28, 32);
+    background-color: rgb(225, 235, 236);
+}
+
+body.light-mode .judulKatalog {
+    color: rgb(20, 28, 32);
+}
+
+body.light-mode .judulBagian p:first-child,
+body.light-mode .kategoriBuku,
+body.light-mode .teksKecil {
+    color: teal;
+}
+
+body.light-mode .deskripsiKatalog {
+    color: rgb(65, 75, 80);
+}
+
+/* FILTER TERANG */
+
+body.light-mode .bagianFilter {
+    background-color: rgb(32, 42, 47);
+    border-color: rgb(70, 100, 105);
+}
+
+body.light-mode .bagianFilter .judulBagian h2 {
+    color: white;
+}
+
+body.light-mode .bagianFilter .judulBagian p:first-child {
+    color: cyan;
+}
+
+body.light-mode .kotakFilter label {
+    color: lightgray;
+}
+
+body.light-mode .kotakFilter select {
+    color: white;
+    background-color: rgb(18, 21, 26);
+    border-color: rgb(70, 110, 115);
+}
+
+body.light-mode .kotakFilter option {
+    color: white;
+    background-color: rgb(18, 21, 26);
+}
+
+/* DAFTAR TERANG */
+
+body.light-mode .judulDaftarBuku .judulBagian h2 {
+    color: rgb(20, 28, 32);
+}
+
+body.light-mode .jumlahBuku {
+    color: rgb(70, 80, 85);
+}
+
+/* KARTU TERANG */
+
+body.light-mode .kartuBuku {
+    background-color: rgb(32, 42, 47);
+    border-color: rgb(70, 100, 105);
+}
+
+body.light-mode .bagianGambar {
+    background-color: rgb(20, 27, 31);
+    border-color: rgb(55, 75, 80);
+}
+
+body.light-mode .infoBuku h3 {
+    color: white;
+}
+
+body.light-mode .penulisBuku {
+    color: rgb(205, 215, 218);
+}
+
+body.light-mode .genreBuku {
+    color: rgb(165, 180, 185);
+}
+
+body.light-mode .hargaBuku {
+    color: white;
+}
+
+body.light-mode .tombolKeranjang {
+    color: cyan;
+    border-color: rgb(70, 110, 115);
+}
+
+body.light-mode .pesan {
+    color: rgb(60, 70, 75);
+}
+
+/* TOMBOL RESET TERANG */
+
+body.light-mode .tombolHapusFilter {
+    color: white;
+    background-color: rgb(48, 60, 65);
+    border-color: rgb(75, 95, 100);
+}
+
+body.light-mode .tombolHapusFilter:hover {
+    color: black;
+    background-color: cyan;
+}
+
+body.light-mode .bukuTidakDitemukan {
+    background-color: rgb(32, 42, 47);
+    border-color: rgb(70, 100, 105);
+}
+
+body.light-mode .bukuTidakDitemukan h2 {
+    color: white;
+}
+
+body.light-mode .bukuTidakDitemukan p {
+    color: lightgray;
+}
+
+/* AJAKAN TERANG */
+
+body.light-mode .ajakanKatalog {
+    background-color: rgb(25, 45, 48);
+    border-color: rgb(50, 100, 105);
+}
+
+body.light-mode .ajakanKatalog h2 {
+    color: white;
+}
+
+body.light-mode .ajakanKatalog div > p:last-child {
+    color: lightgray;
+}
+
+/* LAPTOP BESAR */
+
+@media (min-width: 1400px) {
+
+    .judulKatalog,
+    .bagianFilter,
+    .bagianDaftarBuku,
+    .ajakanKatalog {
+        max-width: 1350px;
+    }
+
+    .kartuBuku {
+        width: calc(25% - 17px);
+    }
+
+    .bagianGambar {
+        height: 350px;
+    }
+}
+
+/* LAPTOP */
+
+@media (min-width: 1001px) and (max-width: 1399px) {
+
+    .judulKatalog,
+    .bagianFilter,
+    .bagianDaftarBuku,
+    .ajakanKatalog {
+        max-width: 1250px;
+    }
+
+    .kartuBuku {
+        width: calc(25% - 17px);
+    }
+
+    .bagianGambar {
+        height: 320px;
+    }
+}
+
+/* TABLET */
+
+@media (min-width: 601px) and (max-width: 1000px) {
+
+    .judulKatalog {
+        padding: 55px 0 35px;
+    }
+
+    .judulBagian h1 {
+        font-size: 34px;
+    }
+
+    .daftarFilter {
+        flex-direction: column;
+    }
+
+    .kotakFilter {
+        width: 100%;
+        flex: none;
+    }
+
+    .kartuBuku {
+        width: calc(50% - 11px);
+        min-width: 0;
+    }
+
+    .bagianGambar {
+        height: 300px;
+    }
+
+    .daftarBuku {
+        gap: 20px;
+    }
+
+    .ajakanKatalog {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tombolLihat {
+        align-self: stretch;
+    }
+}
+
+/* TABLET KECIL */
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+    .judulKatalog {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 45px 0 30px;
+    }
+
+    .bagianFilter {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 22px;
+    }
+
+    .bagianDaftarBuku {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .ajakanKatalog {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 30px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bukuTidakDitemukan {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .judulBagian h1 {
+        font-size: 30px;
+    }
+
+    .deskripsiKatalog {
+        font-size: 14px;
+    }
+
+    .kartuBuku {
+        width: calc(50% - 11px);
+        min-width: 0;
+    }
+
+    .bagianGambar {
+        height: 280px;
+    }
+
+    .infoBuku {
+        padding: 13px;
+    }
+
+    .infoBuku h3 {
+        min-height: 0;
+        font-size: 16px;
+    }
+
+    .penulisBuku {
+        font-size: 12px;
+    }
+
+    .genreBuku {
+        font-size: 11px;
+    }
+
+    .hargaBuku {
+        font-size: 14px;
+    }
+
+    .ratingBuku {
+        font-size: 11px;
+    }
+
+    .tombolDetail,
+    .tombolKeranjang {
+        padding: 10px 6px;
+        font-size: 11px;
+    }
+
+    .tombolLihat {
+        width: 100%;
+    }
+
+    .ajakanKatalog h2 {
+        font-size: 23px;
+    }
+}
+
+/* HP */
+
+@media (min-width: 321px) and (max-width: 480px) {
+
+    .judulKatalog,
+    .bagianFilter,
+    .bagianDaftarBuku,
+    .ajakanKatalog,
+    .bukuTidakDitemukan {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .judulKatalog {
+        width: auto;
+        padding: 35px 0 25px;
+    }
+
+    .bagianFilter {
+        width: auto;
+        padding: 18px;
+    }
+
+    .bagianDaftarBuku {
+        width: auto;
+    }
+
+    .judulBagian h1 {
+        font-size: 27px;
+    }
+
+    .deskripsiKatalog {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .judulDaftarBuku {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .judulDaftarBuku .judulBagian h2 {
+        font-size: 23px;
+    }
+
+    .daftarBuku {
+        gap: 12px;
+    }
+
+    .kartuBuku {
+        width: calc(50% - 6px);
+        min-width: 0;
+    }
+
+    .bagianGambar {
+        height: 240px;
+    }
+
+    .infoBuku {
+        padding: 10px;
+    }
+
+    .infoBuku h3 {
+        min-height: 0;
+        font-size: 14px;
+    }
+
+    .penulisBuku {
+        font-size: 11px;
+    }
+
+    .genreBuku {
+        min-height: 0;
+        font-size: 10px;
+        margin-bottom: 12px;
+    }
+
+    .hargaBuku {
+        font-size: 13px;
+    }
+
+    .ratingBuku {
+        font-size: 10px;
+    }
+
+    .tombolDetail,
+    .tombolKeranjang {
+        padding: 9px 5px;
+        font-size: 10px;
+    }
+
+    .bagianLihatLebihBanyak {
+        margin-top: 25px;
+    }
+
+    .tombolLihatLebihBanyak {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+
+    .ajakanKatalog {
+        width: auto;
+        padding: 25px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ajakanKatalog h2 {
+        font-size: 21px;
+    }
+
+    .ajakanKatalog div > p:last-child {
+        font-size: 13px;
+    }
+
+    .tombolLihat {
+        width: 100%;
+    }
+}
+
+/* HP KECIL */
+
+@media (min-width: 241px) and (max-width: 320px) {
+
+    .judulKatalog,
+    .bagianFilter,
+    .bagianDaftarBuku,
+    .ajakanKatalog,
+    .bukuTidakDitemukan {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .judulKatalog {
+        width: auto;
+        padding: 30px 0 22px;
+    }
+
+    .bagianFilter {
+        width: auto;
+        padding: 15px;
+    }
+
+    .bagianDaftarBuku {
+        width: auto;
+    }
+
+    .judulBagian h1 {
+        font-size: 24px;
+    }
+
+    .deskripsiKatalog {
+        font-size: 12px;
+    }
+
+    .bagianFilter .judulBagian h2 {
+        font-size: 20px;
+    }
+
+    .judulDaftarBuku {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .daftarBuku {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .kartuBuku {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .bagianGambar {
+        height: 300px;
+    }
+
+    .infoBuku {
+        padding: 13px;
+    }
+
+    .infoBuku h3 {
+        font-size: 17px;
+    }
+
+    .penulisBuku {
+        font-size: 13px;
+    }
+
+    .genreBuku {
+        font-size: 11px;
+    }
+
+    .hargaBuku {
+        font-size: 15px;
+    }
+
+    .ratingBuku {
+        font-size: 12px;
+    }
+
+    .tombolDetail,
+    .tombolKeranjang {
+        padding: 11px;
+        font-size: 12px;
+    }
+
+    .ajakanKatalog {
+        width: auto;
+        padding: 22px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ajakanKatalog h2 {
+        font-size: 19px;
+    }
+
+    .ajakanKatalog div > p:last-child {
+        font-size: 11px;
+    }
+
+    .tombolLihat {
+        width: 100%;
+        padding: 10px;
+        font-size: 11px;
+    }
+}
+
+/* SMARTWATCH */
+
+@media (max-width: 240px) {
+
+    .judulKatalog,
+    .bagianFilter,
+    .bagianDaftarBuku,
+    .ajakanKatalog,
+    .bukuTidakDitemukan {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    .judulKatalog {
+        width: auto;
+        padding: 25px 0 18px;
+    }
+
+    .judulBagian p:first-child {
+        font-size: 9px;
+    }
+
+    .judulBagian h1 {
+        font-size: 20px;
+    }
+
+    .deskripsiKatalog {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .bagianFilter {
+        width: auto;
+        padding: 12px;
+    }
+
+    .bagianFilter .judulBagian h2 {
+        font-size: 17px;
+    }
+
+    .kotakFilter label {
+        font-size: 10px;
+    }
+
+    .kotakFilter select {
+        padding: 9px;
+        font-size: 10px;
+    }
+
+    .tombolHapusFilter {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .bagianDaftarBuku {
+        width: auto;
+    }
+
+    .judulDaftarBuku {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .judulDaftarBuku .judulBagian h2 {
+        font-size: 19px;
+    }
+
+    .jumlahBuku {
+        font-size: 10px;
+    }
+
+    .daftarBuku {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .kartuBuku {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .bagianGambar {
+        height: 230px;
+    }
+
+    .infoBuku {
+        padding: 10px;
+    }
+
+    .kategoriBuku {
+        font-size: 9px;
+    }
+
+    .infoBuku h3 {
+        min-height: 0;
+        font-size: 14px;
+    }
+
+    .penulisBuku {
+        font-size: 11px;
+    }
+
+    .genreBuku {
+        font-size: 9px;
+    }
+
+    .hargaBuku {
+        font-size: 12px;
+    }
+
+    .ratingBuku {
+        font-size: 10px;
+    }
+
+    .tombolDetail,
+    .tombolKeranjang {
+        padding: 9px 5px;
+        font-size: 10px;
+    }
+
+    .bagianLihatLebihBanyak {
+        margin-top: 20px;
+    }
+
+    .tombolLihatLebihBanyak {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    .bukuTidakDitemukan {
+        width: auto;
+        padding: 25px 12px;
+    }
+
+    .bukuTidakDitemukan h2 {
+        font-size: 18px;
+    }
+
+    .bukuTidakDitemukan p {
+        font-size: 10px;
+    }
+
+    .ajakanKatalog {
+        width: auto;
+        padding: 18px 12px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ajakanKatalog h2 {
+        font-size: 17px;
+    }
+
+    .ajakanKatalog div > p:last-child {
+        font-size: 10px;
+    }
+
+    .tombolLihat {
+        width: 100%;
+        padding: 10px;
+        font-size: 10px;
+    }
+}

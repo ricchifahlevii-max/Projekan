@@ -1,0 +1,637 @@
+/* UMUM */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    min-height: 75px;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+/* HEADER SAAT SCROLL */
+.header.scrolled {
+    background-color: rgba(18, 21, 26, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgb(70, 110, 115);
+}
+
+/* LOGO */
+.logoBuku {
+    flex-shrink: 0;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.logoBuku span {
+    color: cadetblue;
+}
+
+/* AREA KANAN */
+.areaKanan {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* TOMBOL MODE */
+.tombolMode {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 12px;
+    background-color: rgba(32, 38, 48, 0.75);
+    color: cadetblue;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.tombolMode:hover {
+    background-color: rgb(55, 70, 75);
+    color: white;
+}
+
+/* MENU */
+nav {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 15px;
+    background-color: rgba(32, 38, 48, 0.75);
+}
+
+.menu li a {
+    display: block;
+    padding: 11px 13px;
+    color: lightgray;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 10px;
+}
+
+.menu li a:hover {
+    color: white;
+    background-color: rgb(55, 70, 75);
+}
+
+.menu li a.aktif {
+    color: white;
+    background-color: rgb(55, 80, 85);
+    border: 1px solid cadetblue;
+}
+
+.menu li a.aktif::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 2px;
+    margin: 4px auto 0;
+    background-color: cadetblue;
+}
+
+/* TOMBOL AKUN */
+.tombolAkun {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.tombolMasuk {
+    padding: 10px 13px;
+    color: lightgray;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 10px;
+}
+
+.tombolMasuk:hover {
+    color: white;
+    background-color: rgb(55, 70, 75);
+}
+
+.tombolDaftar {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: cadetblue;
+    border: 1px solid cadetblue;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.tombolDaftar:hover {
+    background-color: lightcyan;
+    color: rgb(25, 45, 48);
+}
+
+/* TOMBOL MENU HP */
+.tombolMenu {
+    width: 44px;
+    height: 44px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: rgba(32, 38, 48, 0.75);
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 12px;
+}
+
+.tombolMenu span {
+    width: 20px;
+    height: 2px;
+    background-color: cadetblue;
+    border-radius: 5px;
+}
+
+/* MODE TERANG */
+body.light-mode .header {
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+body.light-mode .header.scrolled {
+    background-color: rgba(20, 35, 40, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgb(70, 110, 115);
+}
+
+body.light-mode .logoBuku {
+    color: navy;
+}
+
+body.light-mode .logoBuku span {
+    color: blue;
+}
+
+body.light-mode .tombolMode {
+    color: navy;
+    background-color: rgba(245, 250, 250, 0.82);
+    border-color: lightblue;
+}
+
+body.light-mode .tombolMode:hover {
+    background-color: lightblue;
+}
+
+body.light-mode .menu {
+    background-color: rgba(245, 250, 250, 0.82);
+    border-color: lightblue;
+}
+
+body.light-mode .menu li a {
+    color: navy;
+}
+
+body.light-mode .menu li a:hover {
+    color: blue;
+    background-color: lightblue;
+}
+
+body.light-mode .menu li a.aktif {
+    color: blue;
+    background-color: lightblue;
+    border-color: blue;
+}
+
+body.light-mode .tombolMasuk {
+    color: navy;
+}
+
+body.light-mode .tombolMasuk:hover {
+    color: blue;
+    background-color: lightblue;
+}
+
+body.light-mode .tombolDaftar {
+    color: white;
+    background-color: blue;
+    border-color: blue;
+}
+
+body.light-mode .tombolDaftar:hover {
+    background-color: lightblue;
+    color: navy;
+}
+
+body.light-mode .tombolMenu {
+    background-color: rgba(245, 250, 250, 0.82);
+    border-color: lightblue;
+}
+
+body.light-mode .tombolMenu span {
+    background-color: navy;
+}
+
+/* LAPTOP BESAR */
+@media (min-width: 1400px) {
+    .header {
+        padding: 14px 6%;
+        gap: 30px;
+    }
+
+    .logoBuku {
+        font-size: 28px;
+    }
+
+    .areaKanan {
+        gap: 15px;
+    }
+
+    .menu {
+        gap: 5px;
+    }
+
+    .menu li a {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
+
+/* LAPTOP */
+@media (min-width: 1001px) and (max-width: 1399px) {
+    .header {
+        padding: 12px 30px;
+        gap: 18px;
+    }
+
+    .areaKanan {
+        gap: 8px;
+    }
+
+    .menu {
+        gap: 2px;
+    }
+
+    .menu li a {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .tombolAkun {
+        gap: 3px;
+    }
+
+    .tombolMasuk {
+        padding: 9px 8px;
+    }
+
+    .tombolDaftar {
+        padding: 9px 10px;
+    }
+}
+
+/* TABLET DAN HP (nav & tombol akun berubah jadi menu hamburger) */
+@media (max-width: 1000px) {
+    .header {
+        min-height: 70px;
+        padding: 12px 25px;
+        gap: 10px;
+    }
+
+    .logoBuku {
+        font-size: 24px;
+    }
+
+    .areaKanan {
+        gap: 8px;
+    }
+
+    .tombolMenu {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 25px;
+        right: 25px;
+        padding: 10px;
+        background-color: rgba(24, 28, 35, 0.95);
+        border: 1px solid rgb(70, 110, 115);
+        border-radius: 15px;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    nav.aktif {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    .menu li a {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+
+    .menu li a.aktif::after {
+        display: none;
+    }
+
+    /* Tombol akun ikut tampil di dalam sidebar HP */
+    .tombolAkun {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        padding-top: 10px;
+        border-top: 1px solid rgb(70, 110, 115);
+    }
+
+    .tombolAkun .tombolMasuk,
+    .tombolAkun .tombolDaftar {
+        flex: 1;
+        text-align: center;
+        padding: 12px 10px;
+    }
+
+    nav .akunLogin {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgb(70, 110, 115);
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        background-color: transparent;
+    }
+
+    body.light-mode nav {
+        background-color: rgba(24, 35, 40, 0.95);
+        border-color: lightblue;
+    }
+
+    body.light-mode nav .menu {
+        background-color: transparent;
+    }
+
+    body.light-mode nav .menu li a {
+        color: white;
+    }
+
+    body.light-mode nav .menu li a:hover {
+        color: navy;
+    }
+
+    body.light-mode .tombolAkun {
+        border-top-color: lightblue;
+    }
+
+    body.light-mode nav .akunLogin {
+        border-top-color: lightblue;
+    }
+}
+
+/* HP */
+@media (min-width: 321px) and (max-width: 600px) {
+    .header {
+        min-height: 65px;
+        padding: 10px 15px;
+        gap: 6px;
+    }
+
+    .logoBuku {
+        font-size: 21px;
+    }
+
+    .areaKanan {
+        gap: 5px;
+    }
+
+    .tombolMode {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+    }
+
+    .tombolMenu {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav {
+        top: 65px;
+        left: 15px;
+        right: 15px;
+    }
+
+    .menu li a {
+        padding: 13px 14px;
+        font-size: 13px;
+    }
+}
+
+/* HP KECIL */
+@media (min-width: 241px) and (max-width: 320px) {
+    .header {
+        min-height: 60px;
+        padding: 8px 12px;
+        gap: 4px;
+    }
+
+    .logoBuku {
+        font-size: 18px;
+    }
+
+    .areaKanan {
+        gap: 4px;
+    }
+
+    .tombolMode {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    .tombolMenu {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+
+    .tombolMenu span {
+        width: 17px;
+    }
+
+    nav {
+        top: 60px;
+        left: 10px;
+        right: 10px;
+        padding: 7px;
+    }
+
+    .menu li a {
+        padding: 11px 12px;
+        font-size: 12px;
+    }
+}
+
+/* SMARTWATCH */
+@media (max-width: 240px) {
+    .header {
+        min-height: 50px;
+        padding: 6px 8px;
+        gap: 3px;
+    }
+
+    .logoBuku {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
+    .areaKanan {
+        gap: 3px;
+    }
+
+    .tombolMode {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+
+    .tombolMenu {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+    }
+
+    .tombolMenu span {
+        width: 14px;
+    }
+
+    nav {
+        top: 50px;
+        left: 7px;
+        right: 7px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .menu {
+        gap: 2px;
+    }
+
+    .menu li a {
+        padding: 8px 9px;
+        font-size: 10px;
+        border-radius: 7px;
+    }
+}
+
+/* STATUS AKUN LOGIN */
+
+.akunLogin {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid cadetblue;
+    border-radius: 10px;
+    background-color: rgba(32, 38, 48, 0.75);
+}
+
+.ikonAkun {
+    font-size: 18px;
+}
+
+.namaPengguna {
+    max-width: 120px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#tombolLogout {
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 8px;
+    background-color: cadetblue;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#tombolLogout:hover {
+    background-color: lightcyan;
+    color: rgb(25, 45, 48);
+}
+
+body.light-mode .akunLogin {
+    background-color: white;
+    border-color: cadetblue;
+}
+
+body.light-mode .namaPengguna {
+    color: rgb(25, 45, 48);
+}
+
+@media (max-width: 1000px) {
+
+    .akunLogin {
+        padding: 7px 8px;
+    }
+
+    .namaPengguna {
+        max-width: 90px;
+    }
+
+}

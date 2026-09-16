@@ -1,0 +1,1236 @@
+/* UMUM */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(18, 21, 26);
+    color: white;
+}
+
+button,
+input {
+    font-family: Arial, sans-serif;
+}
+
+/* HALAMAN KERANJANG */
+
+.halamanKeranjang {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 5%;
+}
+
+/* KEPALA KERANJANG */
+
+.kepalaKeranjang {
+    width: 100%;
+    padding: 30px 35px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 18px;
+    background-color: rgb(24, 28, 35);
+}
+
+.tombolKembali {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: lightgray;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.tombolKembali:hover {
+    color: cyan;
+}
+
+.labelKeranjang {
+    margin-bottom: 8px;
+    color: cyan;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.kepalaKeranjang h1 {
+    margin-bottom: 8px;
+    font-size: 38px;
+}
+
+.deskripsiKeranjang {
+    color: lightgray;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.jumlahKeranjang {
+    min-width: 110px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 15px;
+    background-color: rgb(32, 38, 48);
+}
+
+.jumlahKeranjang span {
+    display: block;
+    color: cyan;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.jumlahKeranjang p {
+    margin-top: 5px;
+    color: lightgray;
+    font-size: 13px;
+}
+
+/* ISI KERANJANG */
+
+.isiKeranjang {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.bagianDaftarKeranjang {
+    min-width: 0;
+    flex: 1;
+}
+
+/* DAFTAR */
+
+.atasDaftar {
+    width: 100%;
+    min-height: 60px;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 14px;
+    background-color: rgb(24, 28, 35);
+}
+
+.pilihSemua {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pilihSemua input,
+.cekBuku {
+    width: 18px;
+    height: 18px;
+    accent-color: cadetblue;
+    cursor: pointer;
+}
+
+.tombolHapusDipilih,
+.tombolHapusSemua {
+    padding: 9px 14px;
+    border: 1px solid rgb(100, 110, 115);
+    border-radius: 9px;
+    background-color: transparent;
+    color: lightgray;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.tombolHapusDipilih:hover,
+.tombolHapusSemua:hover {
+    background-color: rgb(70, 40, 45);
+    border-color: lightcoral;
+    color: white;
+}
+
+.aksiKeranjang {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* KARTU KERANJANG */
+
+.daftarKeranjang {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.itemKeranjang {
+    width: 100%;
+    min-height: 165px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 15px;
+    background-color: rgb(24, 28, 35);
+}
+
+.itemKeranjang:hover {
+    border-color: cadetblue;
+}
+
+.cekBuku {
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.gambarKeranjang {
+    width: 95px;
+    height: 130px;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: rgb(32, 38, 48);
+}
+
+.gambarKeranjang img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.detailKeranjang {
+    min-width: 0;
+    flex: 1;
+}
+
+.kategoriKeranjang {
+    margin-bottom: 6px;
+    color: cadetblue;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.judulKeranjang {
+    margin-bottom: 7px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.penulisKeranjang {
+    margin-bottom: 10px;
+    color: lightgray;
+    font-size: 13px;
+}
+
+.infoKeranjang {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 15px;
+    min-width: 0;
+    color: gray;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.infoKeranjang span {
+    display: inline-block;
+}
+
+.ratingKeranjang {
+    color: gold;
+}
+
+/* BAGIAN KANAN */
+
+.bagianKananKeranjang {
+    min-width: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 13px;
+    flex-shrink: 0;
+}
+
+.hargaKeranjang {
+    color: cyan;
+    font-size: 17px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.stokKeranjang {
+    margin-top: 5px;
+    color: gray;
+    font-size: 12px;
+}
+
+/* JUMLAH */
+
+.kontrolKeranjang {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 9px;
+    overflow: hidden;
+    background-color: rgb(32, 38, 48);
+}
+
+.tombolJumlah {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.tombolJumlah:hover {
+    background-color: rgb(55, 70, 75);
+    color: cyan;
+}
+
+.jumlahBuku {
+    width: 35px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+.nilaiJumlah {
+    width: 35px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+.tombolHapus {
+    padding: 7px 12px;
+    border: none;
+    background-color: transparent;
+    color: lightgray;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.tombolHapus:hover {
+    color: lightcoral;
+}
+
+/* KERANJANG KOSONG */
+
+.keranjangKosong {
+    width: 100%;
+    padding: 80px 20px;
+    display: none;
+    text-align: center;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 18px;
+    background-color: rgb(24, 28, 35);
+}
+
+.ikonKosong {
+    margin-bottom: 18px;
+    font-size: 55px;
+}
+
+.keranjangKosong h2 {
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.keranjangKosong p {
+    margin-bottom: 25px;
+    color: lightgray;
+}
+
+.tombolBelanja {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 9px;
+    background-color: cadetblue;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tombolBelanja:hover {
+    background-color: cyan;
+    color: rgb(20, 35, 40);
+}
+
+/* RINGKASAN */
+
+.ringkasanKeranjang {
+    width: 350px;
+    height: fit-content;
+    padding: 25px;
+    position: sticky;
+    top: 25px;
+    flex-shrink: 0;
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 17px;
+    background-color: rgb(24, 28, 35);
+}
+
+.ringkasanKeranjang h2 {
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+.garisRingkasan {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 20px;
+    background-color: rgb(70, 110, 115);
+}
+
+.barisRingkasan {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: lightgray;
+    font-size: 14px;
+}
+
+.barisRingkasan strong {
+    color: white;
+}
+
+.barisRingkasan.total {
+    padding-top: 18px;
+    margin-top: 18px;
+    border-top: 1px solid rgb(70, 110, 115);
+    color: white;
+    font-size: 16px;
+}
+
+.barisRingkasan.total strong {
+    color: cyan;
+    font-size: 21px;
+}
+
+.tombolCheckout {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: cadetblue;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tombolCheckout:hover {
+    background-color: cyan;
+    color: rgb(20, 35, 40);
+}
+
+.tombolCheckout:disabled {
+    background-color: rgb(55, 60, 65);
+    color: gray;
+    cursor: not-allowed;
+}
+
+.catatanCheckout {
+    margin-top: 14px;
+    color: gray;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* MODE TERANG */
+
+body.light-mode {
+    background-color: white;
+    color: navy;
+}
+
+body.light-mode .kepalaKeranjang,
+body.light-mode .atasDaftar,
+body.light-mode .itemKeranjang,
+body.light-mode .keranjangKosong,
+body.light-mode .ringkasanKeranjang {
+    background-color: aliceblue;
+    border-color: lightblue;
+}
+
+body.light-mode .tombolKembali {
+    color: navy;
+}
+
+body.light-mode .tombolKembali:hover {
+    color: blue;
+}
+
+body.light-mode .labelKeranjang {
+    color: blue;
+}
+
+body.light-mode .deskripsiKeranjang,
+body.light-mode .penulisKeranjang,
+body.light-mode .jumlahKeranjang p,
+body.light-mode .catatanCheckout {
+    color: gray;
+}
+
+body.light-mode .jumlahKeranjang {
+    background-color: white;
+    border-color: lightblue;
+}
+
+body.light-mode .jumlahKeranjang span {
+    color: blue;
+}
+
+body.light-mode .pilihSemua {
+    color: navy;
+}
+
+body.light-mode .tombolHapusDipilih,
+body.light-mode .tombolHapusSemua {
+    color: navy;
+    border-color: lightblue;
+}
+
+body.light-mode .tombolHapusDipilih:hover,
+body.light-mode .tombolHapusSemua:hover {
+    background-color: lightblue;
+    color: navy;
+}
+
+body.light-mode .judulKeranjang {
+    color: navy;
+}
+
+body.light-mode .infoKeranjang {
+    color: gray;
+}
+
+body.light-mode .hargaKeranjang {
+    color: blue;
+}
+
+body.light-mode .kontrolKeranjang {
+    background-color: white;
+    border-color: lightblue;
+}
+
+body.light-mode .tombolJumlah {
+    color: navy;
+}
+
+body.light-mode .jumlahBuku,
+body.light-mode .nilaiJumlah {
+    color: navy;
+}
+
+body.light-mode .tombolHapus {
+    color: gray;
+}
+
+body.light-mode .ringkasanKeranjang h2,
+body.light-mode .barisRingkasan.total {
+    color: navy;
+}
+
+body.light-mode .garisRingkasan {
+    background-color: lightblue;
+}
+
+body.light-mode .barisRingkasan.total {
+    border-color: lightblue;
+}
+
+body.light-mode .barisRingkasan {
+    color: gray;
+}
+
+body.light-mode .barisRingkasan strong {
+    color: navy;
+}
+
+body.light-mode .barisRingkasan.total strong {
+    color: blue;
+}
+
+body.light-mode .tombolCheckout,
+body.light-mode .tombolBelanja {
+    background-color: blue;
+    color: white;
+}
+
+body.light-mode .tombolCheckout:hover,
+body.light-mode .tombolBelanja:hover {
+    background-color: lightblue;
+    color: navy;
+}
+
+/* LAPTOP BESAR */
+
+@media (min-width: 1400px) {
+
+    .halamanKeranjang {
+        padding: 40px 6%;
+    }
+
+    .isiKeranjang {
+        gap: 30px;
+    }
+
+    .ringkasanKeranjang {
+        width: 370px;
+    }
+
+    .itemKeranjang {
+        padding: 20px;
+    }
+
+    .gambarKeranjang {
+        width: 100px;
+        height: 140px;
+    }
+
+    .bagianKananKeranjang {
+        min-width: 150px;
+    }
+
+}
+
+/* LAPTOP */
+
+@media (min-width: 1001px) and (max-width: 1399px) {
+
+    .halamanKeranjang {
+        padding: 35px 5%;
+    }
+
+    .ringkasanKeranjang {
+        width: 320px;
+    }
+
+    .itemKeranjang {
+        gap: 15px;
+    }
+
+    .gambarKeranjang {
+        width: 90px;
+        height: 125px;
+    }
+
+    .bagianKananKeranjang {
+        min-width: 125px;
+    }
+
+}
+
+/* TABLET */
+
+@media (min-width: 801px) and (max-width: 1000px) {
+
+    .halamanKeranjang {
+        padding: 30px 4%;
+    }
+
+    .isiKeranjang {
+        flex-direction: column;
+    }
+
+    .bagianDaftarKeranjang,
+    .ringkasanKeranjang {
+        width: 100%;
+    }
+
+    .ringkasanKeranjang {
+        position: static;
+    }
+
+    .kepalaKeranjang {
+        padding: 25px;
+    }
+
+    .itemKeranjang {
+        gap: 14px;
+    }
+
+}
+
+/* TABLET KECIL */
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+    .halamanKeranjang {
+        padding: 25px 3%;
+    }
+
+    .isiKeranjang {
+        flex-direction: column;
+    }
+
+    .bagianDaftarKeranjang,
+    .ringkasanKeranjang {
+        width: 100%;
+    }
+
+    .ringkasanKeranjang {
+        position: static;
+    }
+
+    .kepalaKeranjang {
+        padding: 22px;
+    }
+
+    .kepalaKeranjang h1 {
+        font-size: 32px;
+    }
+
+    .itemKeranjang {
+        padding: 15px;
+        gap: 13px;
+        align-items: flex-start;
+    }
+
+    .cekBuku {
+        margin-top: 5px;
+    }
+
+    .gambarKeranjang {
+        width: 80px;
+        height: 115px;
+    }
+
+    .detailKeranjang {
+        padding-top: 2px;
+    }
+
+    .bagianKananKeranjang {
+        min-width: 105px;
+    }
+
+    .hargaKeranjang {
+        font-size: 15px;
+    }
+
+}
+
+/* HP */
+
+@media (min-width: 321px) and (max-width: 600px) {
+
+    .halamanKeranjang {
+        padding: 20px 15px;
+    }
+
+    .kepalaKeranjang {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .kepalaKeranjang h1 {
+        font-size: 29px;
+    }
+
+    .deskripsiKeranjang {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .jumlahKeranjang {
+        width: 100%;
+    }
+
+    .isiKeranjang {
+        flex-direction: column;
+    }
+
+    .bagianDaftarKeranjang,
+    .ringkasanKeranjang {
+        width: 100%;
+    }
+
+    .ringkasanKeranjang {
+        position: static;
+        padding: 20px;
+    }
+
+    .atasDaftar {
+        padding: 10px 13px;
+        align-items: flex-start;
+    }
+
+    .aksiKeranjang {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+    }
+
+    .tombolHapusDipilih,
+    .tombolHapusSemua {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .itemKeranjang {
+        min-height: auto;
+        padding: 13px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .cekBuku {
+        margin: 0;
+    }
+
+    .gambarKeranjang {
+        width: 75px;
+        height: 105px;
+    }
+
+    .detailKeranjang {
+        width: calc(100% - 105px);
+        flex: 1;
+    }
+
+    .judulKeranjang {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .kategoriKeranjang {
+        font-size: 11px;
+    }
+
+    .penulisKeranjang {
+        font-size: 12px;
+    }
+
+    .infoKeranjang {
+        font-size: 10px;
+        gap: 5px 10px;
+    }
+
+    .hargaKeranjang {
+        font-size: 15px;
+    }
+
+    .bagianKananKeranjang {
+        width: 100%;
+        min-width: 0;
+        padding-left: 30px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .kontrolKeranjang {
+        order: 2;
+    }
+
+    .tombolHapus {
+        order: 3;
+    }
+
+}
+
+/* HP KECIL */
+
+@media (min-width: 241px) and (max-width: 320px) {
+
+    .halamanKeranjang {
+        padding: 15px 10px;
+    }
+
+    .kepalaKeranjang {
+        padding: 17px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .tombolKembali {
+        margin-bottom: 15px;
+        font-size: 11px;
+    }
+
+    .labelKeranjang {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .kepalaKeranjang h1 {
+        font-size: 24px;
+    }
+
+    .deskripsiKeranjang {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .jumlahKeranjang {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .jumlahKeranjang span {
+        font-size: 25px;
+    }
+
+    .isiKeranjang {
+        flex-direction: column;
+    }
+
+    .bagianDaftarKeranjang,
+    .ringkasanKeranjang {
+        width: 100%;
+    }
+
+    .ringkasanKeranjang {
+        position: static;
+        padding: 17px;
+    }
+
+    .atasDaftar {
+        padding: 9px;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .pilihSemua {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .pilihSemua input,
+    .cekBuku {
+        width: 15px;
+        height: 15px;
+    }
+
+    .aksiKeranjang {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    .tombolHapusDipilih,
+    .tombolHapusSemua {
+        padding: 6px 8px;
+        font-size: 9px;
+    }
+
+    .itemKeranjang {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .gambarKeranjang {
+        width: 60px;
+        height: 90px;
+    }
+
+    .detailKeranjang {
+        width: calc(100% - 83px);
+    }
+
+    .judulKeranjang {
+        font-size: 13px;
+    }
+
+    .kategoriKeranjang,
+    .penulisKeranjang,
+    .stokKeranjang {
+        font-size: 10px;
+    }
+
+    .infoKeranjang {
+        font-size: 8px;
+        gap: 4px 7px;
+    }
+
+    .hargaKeranjang {
+        font-size: 13px;
+    }
+
+    .bagianKananKeranjang {
+        width: 100%;
+        min-width: 0;
+        padding-left: 23px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .tombolJumlah {
+        width: 27px;
+        height: 27px;
+        font-size: 14px;
+    }
+
+    .jumlahBuku,
+    .nilaiJumlah {
+        width: 28px;
+        font-size: 11px;
+    }
+
+    .tombolHapus {
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+
+    .ringkasanKeranjang h2 {
+        font-size: 18px;
+    }
+
+    .barisRingkasan {
+        font-size: 12px;
+    }
+
+    .barisRingkasan.total strong {
+        font-size: 17px;
+    }
+
+    .tombolCheckout {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+}
+
+/* SMARTWATCH */
+
+@media (max-width: 240px) {
+
+    .halamanKeranjang {
+        padding: 10px 7px;
+    }
+
+    .isiKeranjang {
+        flex-direction: column;
+    }
+
+    .bagianDaftarKeranjang,
+    .ringkasanKeranjang {
+        width: 100%;
+    }
+
+    .kepalaKeranjang {
+        padding: 13px;
+        margin-bottom: 12px;
+        border-radius: 12px;
+        gap: 12px;
+    }
+
+    .tombolKembali {
+        margin-bottom: 12px;
+        font-size: 11px;
+    }
+
+    .labelKeranjang {
+        margin-bottom: 5px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .kepalaKeranjang h1 {
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+
+    .deskripsiKeranjang {
+        font-size: 10px;
+    }
+
+    .jumlahKeranjang {
+        min-width: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .jumlahKeranjang span {
+        font-size: 21px;
+    }
+
+    .jumlahKeranjang p {
+        font-size: 10px;
+    }
+
+    .atasDaftar {
+        min-height: 45px;
+        padding: 7px;
+        margin-bottom: 10px;
+        gap: 5px;
+        border-radius: 10px;
+    }
+
+    .pilihSemua {
+        font-size: 9px;
+        gap: 4px;
+    }
+
+    .pilihSemua input,
+    .cekBuku {
+        width: 13px;
+        height: 13px;
+    }
+
+    .aksiKeranjang {
+        gap: 4px;
+    }
+
+    .tombolHapusDipilih,
+    .tombolHapusSemua {
+        padding: 5px 6px;
+        font-size: 7px;
+    }
+
+    .itemKeranjang {
+        padding: 8px;
+        gap: 6px;
+        border-radius: 10px;
+        align-items: flex-start;
+    }
+
+    .gambarKeranjang {
+        width: 48px;
+        height: 70px;
+    }
+
+    .detailKeranjang {
+        width: calc(100% - 67px);
+    }
+
+    .judulKeranjang {
+        font-size: 11px;
+    }
+
+    .kategoriKeranjang,
+    .penulisKeranjang,
+    .stokKeranjang {
+        font-size: 8px;
+    }
+
+    .infoKeranjang {
+        font-size: 7px;
+        gap: 3px 5px;
+    }
+
+    .hargaKeranjang {
+        font-size: 11px;
+    }
+
+    .bagianKananKeranjang {
+        width: 100%;
+        min-width: 0;
+        padding-left: 19px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3px;
+    }
+
+    .kontrolKeranjang {
+        border-radius: 6px;
+    }
+
+    .tombolJumlah {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+    }
+
+    .jumlahBuku,
+    .nilaiJumlah {
+        width: 23px;
+        font-size: 9px;
+    }
+
+    .tombolHapus {
+        padding: 4px;
+        font-size: 8px;
+    }
+
+    .keranjangKosong {
+        padding: 50px 10px;
+    }
+
+    .ikonKosong {
+        margin-bottom: 10px;
+        font-size: 35px;
+    }
+
+    .keranjangKosong h2 {
+        font-size: 17px;
+    }
+
+    .keranjangKosong p {
+        font-size: 10px;
+    }
+
+    .tombolBelanja {
+        padding: 9px 15px;
+        font-size: 10px;
+    }
+
+    .ringkasanKeranjang {
+        position: static;
+        padding: 13px;
+        border-radius: 11px;
+    }
+
+    .ringkasanKeranjang h2 {
+        margin-bottom: 13px;
+        font-size: 16px;
+    }
+
+    .barisRingkasan {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .barisRingkasan.total {
+        padding-top: 12px;
+        margin-top: 12px;
+        font-size: 12px;
+    }
+
+    .barisRingkasan.total strong {
+        font-size: 14px;
+    }
+
+    .tombolCheckout {
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+    .catatanCheckout {
+        font-size: 8px;
+    }
+
+}

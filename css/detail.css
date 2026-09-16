@@ -1,0 +1,938 @@
+/* UMUM */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(18, 21, 26);
+    color: white;
+}
+
+main {
+    min-height: 500px;
+}
+
+/* DETAIL BUKU */
+
+.detailBuku {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 70px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* GAMBAR BUKU */
+
+.gambarWrapper {
+    width: 390px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+}
+
+.gambarDetail {
+    width: 100%;
+    height: 560px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(29, 35, 44);
+    background-image: radial-gradient(circle at 30% 20%, rgba(0, 255, 255, 0.07), transparent 55%);
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.gambarDetail:hover {
+    border-color: cyan;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 255, 255, 0.15);
+}
+
+.gambarDetail img {
+    width: auto;
+    height: 500px;
+    max-width: 100%;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.tanpaGambar {
+    width: 180px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(45, 55, 65);
+    border-radius: 10px;
+    font-size: 60px;
+}
+
+/* ISI DETAIL */
+
+.isiDetail {
+    min-width: 0;
+    flex: 1;
+    padding: 5px 0;
+}
+
+.labelDetail {
+    margin-bottom: 12px;
+    color: cyan;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.isiDetail h1 {
+    max-width: 750px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: clamp(26px, 3.2vw, 40px);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.penulisDetail {
+    margin-bottom: 28px;
+    color: lightgray;
+    font-size: 17px;
+}
+
+/* INFORMASI SINGKAT */
+
+.infoDetail {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+.infoDetail div {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    background-color: rgb(29, 35, 44);
+    border: 1px solid rgb(55, 80, 87);
+    border-radius: 10px;
+}
+
+.infoDetail div:hover {
+    border-color: cyan;
+}
+
+.infoDetail strong {
+    display: block;
+    margin-bottom: 7px;
+    color: white;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.infoDetail span {
+    display: block;
+    color: rgb(160, 170, 178);
+    font-size: 12px;
+}
+
+/* DATA BUKU */
+
+.dataBuku {
+    margin-bottom: 28px;
+    padding: 20px;
+    background-color: rgb(24, 29, 37);
+    border: 1px solid rgb(55, 75, 82);
+    border-radius: 12px;
+}
+
+.dataBuku p {
+    padding: 9px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid rgb(45, 55, 62);
+    color: lightgray;
+    font-size: 14px;
+}
+
+.dataBuku p:last-child {
+    border-bottom: none;
+}
+
+.dataBuku strong {
+    color: white;
+}
+
+.dataBuku span {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* HARGA */
+
+.hargaDetail {
+    margin-bottom: 28px;
+    color: cyan;
+    font-size: clamp(22px, 2.4vw, 30px);
+    font-weight: bold;
+}
+
+/* DESKRIPSI */
+
+.deskripsiDetail {
+    margin-bottom: 30px;
+    padding: 24px;
+    background-color: rgb(29, 35, 44);
+    border: 1px solid rgb(55, 80, 87);
+    border-radius: 12px;
+}
+
+.deskripsiDetail h2 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.deskripsiDetail p {
+    color: lightgray;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* AKSI BUKU */
+
+.aksiBuku {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tombolKeranjang,
+.tombolCheckout,
+.tombolKembali {
+    min-height: 48px;
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.tombolKeranjang,
+.tombolCheckout {
+    flex: 1;
+    min-width: 180px;
+}
+
+.tombolKembali {
+    width: 100%;
+}
+
+/* KERANJANG */
+
+.tombolKeranjang {
+    color: white;
+    background-color: cadetblue;
+    border: 1px solid cadetblue;
+}
+
+.tombolKeranjang:hover {
+    color: rgb(20, 40, 43);
+    background-color: lightcyan;
+}
+
+/* CHECKOUT */
+
+.tombolCheckout {
+    color: rgb(20, 40, 43);
+    background-color: cyan;
+    border: 1px solid cyan;
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.15);
+}
+
+.tombolCheckout:hover {
+    color: white;
+    background-color: cadetblue;
+    border-color: cadetblue;
+    box-shadow: 0 8px 20px rgba(95, 158, 160, 0.25);
+}
+
+/* KEMBALI */
+
+.tombolKembali {
+    color: lightgray;
+    background-color: rgb(35, 43, 52);
+    border: 1px solid rgb(65, 85, 92);
+}
+
+.tombolKembali:hover {
+    color: white;
+    background-color: rgb(55, 70, 78);
+}
+
+/* BUKU TIDAK DITEMUKAN */
+
+.bukuTidakDitemukan {
+    width: 90%;
+    max-width: 700px;
+    margin: 70px auto;
+    padding: 60px 30px;
+    display: none;
+    text-align: center;
+    background-color: rgb(29, 35, 44);
+    border: 1px solid rgb(70, 110, 115);
+    border-radius: 15px;
+}
+
+.bukuTidakDitemukan h2 {
+    margin-bottom: 12px;
+    font-size: 26px;
+}
+
+.bukuTidakDitemukan p {
+    margin-bottom: 25px;
+    color: lightgray;
+}
+
+.bukuTidakDitemukan a {
+    display: inline-block;
+    padding: 12px 20px;
+    color: rgb(20, 40, 43);
+    background-color: cyan;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bukuTidakDitemukan a:hover {
+    color: white;
+    background-color: cadetblue;
+}
+
+/* MODE TERANG */
+
+body.light-mode {
+    background-color: rgb(215, 220, 222);
+    color: rgb(25, 30, 35);
+}
+
+body.light-mode .gambarDetail {
+    background-color: rgb(45, 52, 58);
+    border-color: rgb(75, 95, 100);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .gambarDetail:hover {
+    border-color: rgb(100, 150, 155);
+}
+
+body.light-mode .isiDetail h1 {
+    color: rgb(25, 30, 35);
+}
+
+body.light-mode .penulisDetail {
+    color: rgb(75, 80, 85);
+}
+
+body.light-mode .infoDetail div {
+    background-color: rgb(235, 238, 239);
+    border-color: rgb(175, 185, 188);
+}
+
+body.light-mode .infoDetail div:hover {
+    border-color: rgb(70, 130, 135);
+}
+
+body.light-mode .infoDetail strong {
+    color: rgb(25, 30, 35);
+}
+
+body.light-mode .infoDetail span {
+    color: rgb(85, 90, 95);
+}
+
+body.light-mode .dataBuku {
+    background-color: rgb(230, 234, 235);
+    border-color: rgb(170, 180, 183);
+}
+
+body.light-mode .dataBuku p {
+    border-color: rgb(200, 205, 207);
+    color: rgb(70, 75, 80);
+}
+
+body.light-mode .dataBuku strong {
+    color: rgb(25, 30, 35);
+}
+
+body.light-mode .hargaDetail {
+    color: rgb(0, 120, 125);
+}
+
+body.light-mode .deskripsiDetail {
+    background-color: rgb(235, 238, 239);
+    border-color: rgb(175, 185, 188);
+}
+
+body.light-mode .deskripsiDetail p {
+    color: rgb(70, 75, 80);
+}
+
+body.light-mode .tombolKembali {
+    color: rgb(35, 50, 55);
+    background-color: rgb(195, 202, 205);
+    border-color: rgb(140, 155, 160);
+}
+
+body.light-mode .tombolKembali:hover {
+    color: white;
+    background-color: rgb(60, 80, 85);
+}
+
+body.light-mode .bukuTidakDitemukan {
+    background-color: rgb(45, 52, 58);
+    border-color: rgb(75, 95, 100);
+    color: white;
+}
+
+body.light-mode .bukuTidakDitemukan p {
+    color: lightgray;
+}
+
+/* LAPTOP BESAR */
+
+@media (min-width: 1400px) {
+    .detailBuku {
+        max-width: 1360px;
+        gap: 70px;
+    }
+
+    .gambarWrapper {
+        width: 420px;
+    }
+
+    .gambarDetail {
+        height: 600px;
+    }
+
+    .gambarDetail img {
+        height: 540px;
+    }
+}
+
+/* LAPTOP */
+
+@media (min-width: 1001px) and (max-width: 1399px) {
+    .detailBuku {
+        width: 92%;
+        gap: 45px;
+        padding: 60px 0;
+    }
+
+    .gambarWrapper {
+        width: 350px;
+    }
+
+    .gambarDetail {
+        height: 520px;
+        padding: 20px;
+    }
+
+    .gambarDetail img {
+        height: 470px;
+    }
+
+    .isiDetail h1 {
+        font-size: 34px;
+    }
+}
+
+/* TABLET */
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .detailBuku {
+        width: 92%;
+        gap: 30px;
+        padding: 50px 0;
+    }
+
+    .gambarWrapper {
+        width: 300px;
+        position: static;
+    }
+
+    .gambarDetail {
+        height: 450px;
+        padding: 18px;
+    }
+
+    .gambarDetail img {
+        height: 410px;
+    }
+
+    .isiDetail h1 {
+        font-size: 30px;
+    }
+
+    .penulisDetail {
+        font-size: 15px;
+    }
+
+    .infoDetail {
+        gap: 8px;
+    }
+
+    .infoDetail div {
+        padding: 13px;
+    }
+
+    .dataBuku {
+        padding: 16px;
+    }
+
+    .aksiBuku {
+        flex-direction: column;
+    }
+
+    .tombolKeranjang,
+    .tombolCheckout,
+    .tombolKembali {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* TABLET KECIL */
+
+@media (min-width: 481px) and (max-width: 600px) {
+    .detailBuku {
+        width: auto;
+        margin: 0 25px;
+        padding: 40px 0 50px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .gambarWrapper {
+        width: 100%;
+        position: static;
+    }
+
+    .gambarDetail {
+        width: 330px;
+        max-width: 100%;
+        height: 440px;
+        margin: 0 auto;
+    }
+
+    .gambarDetail img {
+        height: 400px;
+        max-width: 90%;
+    }
+
+    .isiDetail {
+        width: 100%;
+    }
+
+    .isiDetail h1 {
+        font-size: 29px;
+    }
+
+    .infoDetail {
+        flex-direction: column;
+    }
+
+    .infoDetail div {
+        width: 100%;
+    }
+
+    .aksiBuku {
+        flex-direction: column;
+    }
+
+    .tombolKeranjang,
+    .tombolCheckout,
+    .tombolKembali {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* HP */
+
+@media (min-width: 321px) and (max-width: 480px) {
+    .detailBuku {
+        width: auto;
+        margin: 0 18px;
+        padding: 30px 0 45px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .gambarWrapper {
+        width: 100%;
+        position: static;
+    }
+
+    .gambarDetail {
+        width: 100%;
+        height: 400px;
+        padding: 18px;
+    }
+
+    .gambarDetail img {
+        height: 365px;
+        max-width: 90%;
+    }
+
+    .isiDetail {
+        width: 100%;
+    }
+
+    .labelDetail {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .isiDetail h1 {
+        font-size: 26px;
+    }
+
+    .penulisDetail {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .infoDetail {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .infoDetail div {
+        padding: 12px;
+    }
+
+    .dataBuku {
+        padding: 14px;
+    }
+
+    .dataBuku p {
+        font-size: 13px;
+        gap: 12px;
+    }
+
+    .hargaDetail {
+        font-size: 24px;
+    }
+
+    .deskripsiDetail {
+        padding: 18px;
+    }
+
+    .deskripsiDetail p {
+        font-size: 13px;
+    }
+
+    .aksiBuku {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .tombolKeranjang,
+    .tombolCheckout,
+    .tombolKembali {
+        width: 100%;
+        min-width: 0;
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+}
+
+/* HP KECIL */
+
+@media (min-width: 241px) and (max-width: 320px) {
+    .detailBuku {
+        width: auto;
+        margin: 0 12px;
+        padding: 25px 0 35px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gambarWrapper {
+        width: 100%;
+        position: static;
+    }
+
+    .gambarDetail {
+        width: 100%;
+        height: 330px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .gambarDetail img {
+        height: 300px;
+        max-width: 90%;
+    }
+
+    .tanpaGambar {
+        width: 130px;
+        height: 190px;
+        font-size: 45px;
+    }
+
+    .labelDetail {
+        margin-bottom: 8px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .isiDetail h1 {
+        margin-bottom: 8px;
+        font-size: 21px;
+    }
+
+    .penulisDetail {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+    .infoDetail {
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 18px;
+    }
+
+    .infoDetail div {
+        padding: 10px;
+    }
+
+    .infoDetail strong {
+        margin-bottom: 4px;
+        font-size: 13px;
+    }
+
+    .infoDetail span {
+        font-size: 10px;
+    }
+
+    .dataBuku {
+        margin-bottom: 20px;
+        padding: 12px;
+    }
+
+    .dataBuku p {
+        flex-direction: column;
+        gap: 3px;
+        font-size: 11px;
+    }
+
+    .dataBuku span {
+        text-align: left;
+    }
+
+    .hargaDetail {
+        margin-bottom: 18px;
+        font-size: 20px;
+    }
+
+    .deskripsiDetail {
+        margin-bottom: 20px;
+        padding: 14px;
+    }
+
+    .deskripsiDetail h2 {
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .deskripsiDetail p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .aksiBuku {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .tombolKeranjang,
+    .tombolCheckout,
+    .tombolKembali {
+        width: 100%;
+        min-width: 0;
+        min-height: 38px;
+        padding: 9px 8px;
+        font-size: 10px;
+    }
+
+    .bukuTidakDitemukan {
+        width: auto;
+        margin: 35px 12px;
+        padding: 35px 15px;
+    }
+
+    .bukuTidakDitemukan h2 {
+        font-size: 19px;
+    }
+
+    .bukuTidakDitemukan p {
+        font-size: 11px;
+    }
+}
+
+/* SMARTWATCH */
+
+@media (max-width: 240px) {
+    .detailBuku {
+        width: auto;
+        margin: 0 8px;
+        padding: 18px 0 25px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .gambarWrapper {
+        width: 100%;
+        position: static;
+    }
+
+    .gambarDetail {
+        width: 100%;
+        height: 250px;
+        padding: 8px;
+        border-radius: 9px;
+    }
+
+    .gambarDetail img {
+        height: 225px;
+        max-width: 90%;
+    }
+
+    .tanpaGambar {
+        width: 100px;
+        height: 150px;
+        font-size: 35px;
+    }
+
+    .labelDetail {
+        margin-bottom: 5px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .isiDetail h1 {
+        margin-bottom: 5px;
+        font-size: 17px;
+    }
+
+    .penulisDetail {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .infoDetail {
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 12px;
+    }
+
+    .infoDetail div {
+        padding: 7px;
+    }
+
+    .infoDetail strong {
+        margin-bottom: 3px;
+        font-size: 10px;
+    }
+
+    .infoDetail span {
+        font-size: 8px;
+    }
+
+    .dataBuku {
+        margin-bottom: 14px;
+        padding: 8px;
+    }
+
+    .dataBuku p {
+        flex-direction: column;
+        gap: 2px;
+        padding: 5px 0;
+        font-size: 9px;
+    }
+
+    .dataBuku span {
+        text-align: left;
+    }
+
+    .hargaDetail {
+        margin-bottom: 14px;
+        font-size: 16px;
+    }
+
+    .deskripsiDetail {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .deskripsiDetail h2 {
+        margin-bottom: 6px;
+        font-size: 13px;
+    }
+
+    .deskripsiDetail p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .aksiBuku {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .tombolKeranjang,
+    .tombolCheckout,
+    .tombolKembali {
+        width: 100%;
+        min-width: 0;
+        min-height: 32px;
+        padding: 7px 5px;
+        font-size: 8px;
+        border-radius: 6px;
+    }
+
+    .bukuTidakDitemukan {
+        width: auto;
+        margin: 25px 8px;
+        padding: 25px 10px;
+    }
+
+    .bukuTidakDitemukan h2 {
+        font-size: 15px;
+    }
+
+    .bukuTidakDitemukan p {
+        margin-bottom: 15px;
+        font-size: 9px;
+    }
+
+    .bukuTidakDitemukan a {
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+}

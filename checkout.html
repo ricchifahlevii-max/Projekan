@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - BukaBuku</title>
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+
+<body class="dark-mode">
+
+    <!-- HEADER CHECKOUT: LOGO DAN TOMBOL KEMBALI -->
+    <header class="headerCheckout">
+        <!-- Logo BukaBuku -->
+        <a href="index.html" class="logoBuku">Buka<span>Buku</span></a>
+        <!-- Tombol kembali ke halaman Home -->
+        <a href="index.html" class="tombolHome">← Kembali ke Beranda</a>
+    </header>
+
+    <!-- ISI HALAMAN CHECKOUT -->
+    <main class="checkout">
+
+        <!-- JUDUL -->
+        <div class="judulCheckout">
+            <p>PEMESANAN</p>
+            <h1>Checkout</h1>
+            <span>Periksa kembali buku dan data pemesananmu.</span>
+        </div>
+
+        <div class="isiCheckout">
+
+            <!-- DAFTAR BUKU YANG AKAN DIPESAN -->
+            <section class="daftarPesanan">
+
+                <div class="judulPesanan">
+                    <div>
+                        <p class="labelPesanan">BUKU PILIHAN</p>
+                        <h2>Pesanan Kamu</h2>
+                    </div>
+                    <span id="jumlahPesanan">0 buku</span>
+                </div>
+
+                <div id="daftarCheckout" class="daftarCheckout">
+                    <p class="pesanCheckout">Memuat pesanan...</p>
+                </div>
+
+            </section>
+
+            <!-- FORM DATA PEMESAN DAN PENGIRIMAN -->
+            <section class="formPesanan">
+
+                <div class="judulForm">
+                    <p class="labelPesanan">INFORMASI</p>
+                    <h2>Data Pemesan</h2>
+                    <span>Isi data dengan benar untuk proses pengiriman.</span>
+                </div>
+
+                <!-- Form untuk mengisi data pemesanan -->
+                <form id="formCheckout">
+
+                    <!-- Satu kelompok input data -->
+                    <div class="formGrup">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <!-- Satu kelompok input data -->
+                    <div class="formGrup">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Masukkan email" required>
+                    </div>
+
+                    <!-- Satu kelompok input data -->
+                    <div class="formGrup">
+                        <label for="telepon">Nomor Telepon</label>
+                        <input type="tel" id="telepon" placeholder="Masukkan nomor telepon" required>
+                    </div>
+
+                    <!-- Satu kelompok input data -->
+                    <div class="formGrup">
+                        <label for="alamat">Alamat Pengiriman</label>
+                        <textarea id="alamat" placeholder="Masukkan alamat lengkap" required></textarea>
+                    </div>
+
+                    <!-- Satu kelompok input data -->
+                    <div class="formGrup">
+                        <label for="pembayaran">Metode Pembayaran</label>
+                        <select id="pembayaran" required>
+                            <option value="">Pilih pembayaran</option>
+                            <option value="Transfer Bank">Transfer Bank</option>
+                            <option value="E-Wallet">E-Wallet</option>
+                            <option value="COD">COD</option>
+                        </select>
+                    </div>
+
+                    <!-- RINGKASAN -->
+                    <div class="ringkasan">
+
+                        <div>
+                            <span>Subtotal</span>
+                            <strong id="subtotal">Rp 0</strong>
+                        </div>
+
+                        <div>
+                            <span>Pengiriman</span>
+                            <strong id="pengiriman">Rp 0</strong>
+                        </div>
+
+                        <div class="total">
+                            <span>Total Pembayaran</span>
+                            <strong id="totalPembayaran">Rp 0</strong>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="tombolBayar">
+                        Buat Pesanan
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- PESANAN BERHASIL -->
+    <div class="pesananBerhasil" id="pesananBerhasil">
+        <div class="kotakBerhasil">
+            <span class="ikonBerhasil">✓</span>
+            <p class="labelBerhasil">PESANAN SELESAI</p>
+            <h2>Pesanan Berhasil!</h2>
+            <p>Pesanan kamu berhasil dibuat dan sedang diproses.</p>
+            <a href="index.html">Kembali ke Beranda</a>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk proses checkout -->
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>

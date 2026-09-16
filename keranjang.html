@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang - BukaBuku</title>
+    <link rel="stylesheet" href="css/keranjang.css">
+</head>
+
+<body>
+
+    <!-- ISI UTAMA HALAMAN KERANJANG -->
+    <main class="halamanKeranjang">
+
+        <!-- JUDUL KERANJANG DAN JUMLAH BARANG -->
+        <section class="kepalaKeranjang">
+            <div>
+                <!--   Tombol kembali ke katalog -->
+                <a href="katalog.html" class="tombolKembali">← Kembali ke Katalog</a>
+                <p class="labelKeranjang">BUKABUKU</p>
+                <h1>Keranjang Belanja</h1>
+                <p class="deskripsiKeranjang">Pilih buku yang ingin kamu checkout.</p>
+            </div>
+
+            <!-- Jumlah barang di keranjang -->
+            <div class="jumlahKeranjang">
+                <span id="jumlahKeranjang">0</span>
+                <p>Barang</p>
+            </div>
+        </section>
+
+        <!-- DAFTAR BARANG DAN RINGKASAN BELANJA -->
+        <section class="isiKeranjang">
+
+            <!-- DAFTAR BARANG DI KERANJANG -->
+            <div class="bagianDaftarKeranjang">
+
+                <!-- Pilihan semua dan tombol hapus -->
+                <div class="atasDaftar">
+
+                    <label class="pilihSemua">
+                        <input type="checkbox" id="pilihSemua">
+                        <span>Pilih Semua</span>
+                    </label>
+
+                    <div class="aksiKeranjang">
+                        <button id="hapusDipilih" class="tombolHapusDipilih">
+                            Hapus Dipilih
+                        </button>
+
+                        <button id="hapusSemua" class="tombolHapusSemua">
+                            Hapus Semua
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Tempat daftar barang yang diisi JavaScript -->
+                <div id="daftarKeranjang" class="daftarKeranjang"></div>
+
+                <!-- Tampilan ketika keranjang belum memiliki barang -->
+                <div id="keranjangKosong" class="keranjangKosong">
+                    <div class="ikonKosong">🛒</div>
+                    <h2>Keranjang masih kosong</h2>
+                    <p>Yuk cari buku yang ingin kamu beli.</p>
+                    <a href="katalog.html" class="tombolBelanja">Mulai Belanja</a>
+                </div>
+
+            </div>
+
+            <!-- RINGKASAN TOTAL BELANJA -->
+            <aside class="ringkasanKeranjang">
+
+                <h2>Ringkasan Belanja</h2>
+
+                <div class="garisRingkasan"></div>
+
+                <div class="barisRingkasan">
+                    <span>Barang dipilih</span>
+                    <strong id="jumlahDipilih">0</strong>
+                </div>
+
+                <div class="barisRingkasan">
+                    <span>Total barang</span>
+                    <strong id="jumlahUnit">0</strong>
+                </div>
+
+                <div class="barisRingkasan total">
+                    <span>Total Harga</span>
+                    <strong id="totalHarga">Rp 0</strong>
+                </div>
+
+                <!-- Tombol menuju proses checkout -->
+                <button id="tombolCheckout" class="tombolCheckout">
+                    Checkout
+                </button>
+
+                <p class="catatanCheckout">
+                    Hanya barang yang kamu pilih yang akan diproses ke checkout.
+                </p>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+    <script src="js/keranjang.js"></script>
+</body>
+
+</html>

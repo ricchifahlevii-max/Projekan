@@ -1,0 +1,588 @@
+/* UMUM */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+button,
+input {
+    font-family: Arial, sans-serif;
+}
+
+/* TOMBOL MODE */
+
+.tombolMode {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border: 2px solid cadetblue;
+    border-radius: 50%;
+    background-color: darkslategray;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* HALAMAN AUTH */
+
+.halamanAuth {
+    width: 900px;
+    min-height: 600px;
+    display: flex;
+    background-color: darkslategray;
+    border: 1px solid cadetblue;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px black;
+}
+
+/* BAGIAN LOGO */
+
+.bagianLogo {
+    width: 50%;
+    padding: 60px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: midnightblue;
+}
+
+.logo {
+    color: cyan;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+
+.bagianLogo h1 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.bagianLogo p {
+    color: lightgray;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.tombolHome {
+    width: fit-content;
+    padding: 12px 22px;
+    border: 1px solid cadetblue;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+/* BAGIAN FORM */
+
+.bagianForm {
+    width: 50%;
+    padding: 45px 50px;
+    background-color: darkslategray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bagianForm h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.teksKecil {
+    color: lightgray;
+    margin-bottom: 25px;
+}
+
+/* INPUT */
+
+.inputGroup {
+    margin-bottom: 14px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid slategray;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    outline: none;
+}
+
+.inputGroup input:focus {
+    border-color: cyan;
+}
+
+.inputGroup input.inputSalah {
+    border-color: red;
+}
+
+.inputGroup small {
+    display: block;
+    min-height: 17px;
+    margin-top: 4px;
+    color: lightcoral;
+}
+
+/* PASSWORD */
+
+.kotakPassword {
+    display: flex;
+    gap: 8px;
+}
+
+.kotakPassword input {
+    flex: 1;
+}
+
+.kotakPassword button {
+    padding: 0 13px;
+    border: 1px solid slategray;
+    border-radius: 8px;
+    background-color: slategray;
+    color: white;
+    cursor: pointer;
+}
+
+/* PESAN */
+
+.pesan {
+    min-height: 20px;
+    color: lightcoral;
+    margin-bottom: 8px;
+}
+
+/* TOMBOL */
+
+.tombolDaftar {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: cadetblue;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tombolDaftar:hover {
+    background-color: teal;
+}
+
+.sudahAkun {
+    text-align: center;
+    color: lightgray;
+    margin-top: 20px;
+}
+
+.sudahAkun a {
+    color: cyan;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* MODE TERANG */
+
+body.light-mode {
+    background-color: aliceblue;
+    color: midnightblue;
+}
+
+body.light-mode .halamanAuth {
+    background-color: whitesmoke;
+    border-color: cadetblue;
+    box-shadow: 0 15px 35px gray;
+}
+
+body.light-mode .bagianLogo {
+    background-color: midnightblue;
+    color: white;
+}
+
+body.light-mode .bagianForm {
+    background-color: whitesmoke;
+    color: midnightblue;
+}
+
+body.light-mode .teksKecil,
+body.light-mode .sudahAkun {
+    color: dimgray;
+}
+
+body.light-mode .tombolMode {
+    background-color: white;
+    color: midnightblue;
+}
+
+/* LAPTOP BESAR */
+
+@media (min-width: 1400px) {
+    .halamanAuth {
+        width: 950px;
+        min-height: 620px;
+    }
+
+    .bagianLogo {
+        padding: 65px 55px;
+    }
+
+    .bagianForm {
+        padding: 50px 55px;
+    }
+}
+
+/* LAPTOP */
+
+@media (min-width: 1001px) and (max-width: 1399px) {
+    .halamanAuth {
+        width: 900px;
+    }
+}
+
+/* TABLET */
+
+@media (min-width: 801px) and (max-width: 1000px) {
+    body {
+        padding: 25px;
+    }
+
+    .halamanAuth {
+        width: 100%;
+        max-width: 850px;
+    }
+
+    .bagianLogo,
+    .bagianForm {
+        padding: 45px 35px;
+    }
+
+    .logo {
+        margin-bottom: 50px;
+    }
+
+    .bagianLogo h1 {
+        font-size: 28px;
+    }
+}
+
+/* TABLET KECIL */
+
+@media (min-width: 601px) and (max-width: 800px) {
+    body {
+        padding: 20px;
+    }
+
+    .halamanAuth {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .bagianLogo,
+    .bagianForm {
+        width: 100%;
+    }
+
+    .bagianLogo {
+        padding: 35px;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+    }
+
+    .bagianLogo h1 {
+        font-size: 26px;
+    }
+
+    .bagianForm {
+        padding: 35px;
+    }
+}
+
+/* HP */
+
+@media (min-width: 321px) and (max-width: 600px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .tombolMode {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .halamanAuth {
+        width: 100%;
+        margin-top: 45px;
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    .bagianLogo,
+    .bagianForm {
+        width: 100%;
+    }
+
+    .bagianLogo {
+        padding: 28px 22px;
+    }
+
+    .logo {
+        margin-bottom: 28px;
+        font-size: 28px;
+    }
+
+    .bagianLogo h1 {
+        font-size: 24px;
+    }
+
+    .bagianLogo p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .bagianForm {
+        padding: 28px 22px;
+    }
+
+    .bagianForm h2 {
+        font-size: 27px;
+    }
+
+    .teksKecil {
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+
+    .inputGroup input {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* HP KECIL */
+
+@media (min-width: 241px) and (max-width: 320px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .tombolMode {
+        top: 8px;
+        right: 8px;
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .halamanAuth {
+        width: 100%;
+        margin-top: 40px;
+        flex-direction: column;
+        border-radius: 12px;
+    }
+
+    .bagianLogo,
+    .bagianForm {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .bagianLogo h1 {
+        font-size: 21px;
+    }
+
+    .bagianLogo p {
+        font-size: 11px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .tombolHome {
+        padding: 9px 15px;
+        font-size: 11px;
+    }
+
+    .bagianForm h2 {
+        font-size: 23px;
+    }
+
+    .teksKecil {
+        margin-bottom: 18px;
+        font-size: 11px;
+    }
+
+    .inputGroup {
+        margin-bottom: 12px;
+    }
+
+    .inputGroup label {
+        margin-bottom: 5px;
+        font-size: 11px;
+    }
+
+    .inputGroup input {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .inputGroup small {
+        font-size: 9px;
+    }
+
+    .kotakPassword {
+        gap: 5px;
+    }
+
+    .kotakPassword button {
+        padding: 0 9px;
+        font-size: 10px;
+    }
+
+    .tombolDaftar {
+        padding: 11px;
+        font-size: 12px;
+    }
+
+    .sudahAkun {
+        margin-top: 16px;
+        font-size: 10px;
+    }
+}
+
+/* SMARTWATCH */
+
+@media (max-width: 240px) {
+    body {
+        padding: 7px;
+        align-items: flex-start;
+    }
+
+    .tombolMode {
+        top: 6px;
+        right: 6px;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .halamanAuth {
+        width: 100%;
+        margin-top: 35px;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .bagianLogo,
+    .bagianForm {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        font-size: 19px;
+    }
+
+    .bagianLogo h1 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .bagianLogo p {
+        font-size: 9px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .tombolHome {
+        padding: 7px 10px;
+        font-size: 9px;
+    }
+
+    .bagianForm h2 {
+        font-size: 19px;
+    }
+
+    .teksKecil {
+        margin-bottom: 13px;
+        font-size: 9px;
+    }
+
+    .inputGroup {
+        margin-bottom: 9px;
+    }
+
+    .inputGroup label {
+        margin-bottom: 4px;
+        font-size: 9px;
+    }
+
+    .inputGroup input {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .inputGroup small {
+        font-size: 8px;
+    }
+
+    .kotakPassword {
+        gap: 4px;
+    }
+
+    .kotakPassword button {
+        padding: 0 6px;
+        font-size: 8px;
+    }
+
+    .pesan {
+        font-size: 9px;
+    }
+
+    .tombolDaftar {
+        padding: 9px;
+        font-size: 10px;
+    }
+
+    .sudahAkun {
+        margin-top: 11px;
+        font-size: 8px;
+    }
+}

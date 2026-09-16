@@ -1,0 +1,465 @@
+/* FOOTER */
+.footer {
+    background-color: rgb(24, 28, 35);
+    border-top: 1px solid rgb(70, 110, 115);
+    color: white;
+}
+
+.isiFooter {
+    padding: 60px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.bagianFooter {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tentangBuku {
+    flex: 2;
+}
+
+.logoFooter {
+    margin-bottom: 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logoFooter span {
+    color: cadetblue;
+}
+
+.tentangBuku p {
+    max-width: 300px;
+    color: lightgray;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.bagianFooter h3 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.bagianFooter > a {
+    margin-bottom: 12px;
+    color: lightgray;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.bagianFooter > a:hover {
+    color: cadetblue;
+}
+
+/* SOSIAL MEDIA */
+.sosialMedia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.sosialMedia a {
+    padding: 7px 10px;
+    color: lightgray;
+    text-decoration: none;
+    border: 1px solid rgb(80, 90, 100);
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.sosialMedia a:hover {
+    color: white;
+    border-color: cadetblue;
+    background-color: rgb(55, 70, 75);
+}
+
+/* KONTAK */
+.kontakFooter p {
+    margin-bottom: 13px;
+    color: lightgray;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* BAGIAN BAWAH */
+.bawahFooter {
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid rgb(70, 110, 115);
+}
+
+.bawahFooter p {
+    color: lightgray;
+    font-size: 13px;
+}
+
+.bawahFooter div {
+    display: flex;
+    gap: 20px;
+}
+
+.bawahFooter a {
+    color: lightgray;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.bawahFooter a:hover {
+    color: cadetblue;
+}
+
+/* MODE TERANG */
+body.light-mode .footer {
+    background-color: navy;
+    color: white;
+    border-top-color: blue;
+}
+
+body.light-mode .logoFooter {
+    color: white;
+}
+
+body.light-mode .logoFooter span {
+    color: lightblue;
+}
+
+body.light-mode .tentangBuku p {
+    color: lightgray;
+}
+
+body.light-mode .bagianFooter h3 {
+    color: white;
+}
+
+body.light-mode .bagianFooter > a {
+    color: lightgray;
+}
+
+body.light-mode .bagianFooter > a:hover {
+    color: lightblue;
+}
+
+body.light-mode .sosialMedia a {
+    color: lightgray;
+    border-color: gray;
+}
+
+body.light-mode .sosialMedia a:hover {
+    color: white;
+    border-color: lightblue;
+    background-color: blue;
+}
+
+body.light-mode .kontakFooter p {
+    color: lightgray;
+}
+
+body.light-mode .bawahFooter {
+    border-top-color: blue;
+}
+
+body.light-mode .bawahFooter p {
+    color: lightgray;
+}
+
+body.light-mode .bawahFooter a {
+    color: lightgray;
+}
+
+body.light-mode .bawahFooter a:hover {
+    color: lightblue;
+}
+
+/* LAPTOP BESAR */
+@media (min-width: 1400px) {
+    .isiFooter {
+        padding: 70px 8%;
+        gap: 50px;
+    }
+
+    .logoFooter {
+        font-size: 30px;
+    }
+
+    .tentangBuku p {
+        max-width: 340px;
+        font-size: 15px;
+    }
+}
+
+/* LAPTOP */
+@media (min-width: 1001px) and (max-width: 1399px) {
+    .isiFooter {
+        gap: 30px;
+    }
+
+    .bagianFooter {
+        min-width: 140px;
+    }
+
+    .tentangBuku {
+        min-width: 220px;
+    }
+}
+
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1000px) {
+    .isiFooter {
+        padding: 50px 6%;
+        gap: 35px;
+    }
+
+    .bagianFooter {
+        flex: 1 1 40%;
+    }
+
+    .tentangBuku {
+        flex: 1 1 100%;
+    }
+
+    .tentangBuku p {
+        max-width: 100%;
+    }
+
+    .bagianFooter h3 {
+        margin-bottom: 16px;
+    }
+
+    .bawahFooter {
+        padding: 18px 6%;
+    }
+}
+
+/* TABLET KECIL */
+@media (min-width: 481px) and (max-width: 600px) {
+    .isiFooter {
+        padding: 45px 25px;
+        gap: 30px;
+    }
+
+    .bagianFooter {
+        flex: 1 1 40%;
+    }
+
+    .tentangBuku {
+        flex: 1 1 100%;
+    }
+
+    .tentangBuku p {
+        max-width: 100%;
+    }
+
+    .bawahFooter {
+        padding: 20px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bawahFooter div {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+}
+
+/* HP */
+@media (min-width: 321px) and (max-width: 480px) {
+    .isiFooter {
+        padding: 45px 20px;
+        gap: 28px;
+        flex-direction: column;
+    }
+
+    .bagianFooter,
+    .tentangBuku {
+        flex: none;
+        width: 100%;
+    }
+
+    .tentangBuku p {
+        max-width: 100%;
+        font-size: 13px;
+    }
+
+    .bagianFooter h3 {
+        margin-bottom: 14px;
+        font-size: 15px;
+    }
+
+    .bagianFooter > a {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .kontakFooter p {
+        font-size: 13px;
+    }
+
+    .sosialMedia {
+        gap: 6px;
+    }
+
+    .sosialMedia a {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .bawahFooter {
+        padding: 18px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .bawahFooter div {
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+
+    .bawahFooter p,
+    .bawahFooter a {
+        font-size: 12px;
+    }
+}
+
+/* HP KECIL */
+@media (min-width: 241px) and (max-width: 320px) {
+    .isiFooter {
+        padding: 35px 15px;
+        gap: 25px;
+        flex-direction: column;
+    }
+
+    .bagianFooter,
+    .tentangBuku {
+        flex: none;
+        width: 100%;
+    }
+
+    .logoFooter {
+        font-size: 23px;
+    }
+
+    .tentangBuku p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .bagianFooter h3 {
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .bagianFooter > a {
+        margin-bottom: 9px;
+        font-size: 12px;
+    }
+
+    .kontakFooter p {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .sosialMedia {
+        gap: 5px;
+    }
+
+    .sosialMedia a {
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+    .bawahFooter {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .bawahFooter div {
+        flex-wrap: wrap;
+        gap: 8px 12px;
+    }
+
+    .bawahFooter p,
+    .bawahFooter a {
+        font-size: 11px;
+    }
+}
+
+/* SMARTWATCH */
+@media (max-width: 240px) {
+    .isiFooter {
+        padding: 25px 10px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .bagianFooter,
+    .tentangBuku {
+        flex: none;
+        width: 100%;
+    }
+
+    .logoFooter {
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+
+    .tentangBuku p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .bagianFooter h3 {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .bagianFooter > a {
+        margin-bottom: 7px;
+        font-size: 10px;
+    }
+
+    .kontakFooter p {
+        margin-bottom: 8px;
+        font-size: 10px;
+    }
+
+    .sosialMedia {
+        gap: 4px;
+        margin-top: 12px;
+    }
+
+    .sosialMedia a {
+        padding: 4px 6px;
+        font-size: 9px;
+    }
+
+    .bawahFooter {
+        padding: 12px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .bawahFooter div {
+        flex-wrap: wrap;
+        gap: 6px 10px;
+    }
+
+    .bawahFooter p,
+    .bawahFooter a {
+        font-size: 9px;
+    }
+}

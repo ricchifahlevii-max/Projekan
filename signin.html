@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - BukaBuku</title>
+    <link rel="stylesheet" href="css/signin.css">
+</head>
+
+<body class="dark-mode">
+    <!-- Tombol untuk mengganti mode terang dan gelap -->
+    <button id="tombolMode" class="tombolMode">☾</button>
+    <!--   HALAMAN SIGN IN: BAGIAN INFORMASI DAN FORM AKUN -->
+    <main class="halamanAuth">
+        <!--  Bagian logo dan sambutan -->
+        <section class="bagianLogo">
+            <div class="logo">BukaBuku</div>
+            <h1>Selamat Datang Kembali!</h1>
+            <p>Masuk ke akun BukaBuku kamu dan lanjutkan perjalanan membaca.</p>
+            <a href="index.html" class="tombolHome">Kembali ke Home</a>
+        </section>
+        <!-- Bagian form untuk akun pengguna -->
+        <section class="bagianForm">
+            <h2>Sign In</h2>
+            <p class="teksKecil">Masuk menggunakan akun kamu</p>
+            <!-- Form untuk mengisi data sign in pengguna -->
+            <form id="formSignin">
+                <!-- Satu kelompok input -->
+                <div class="inputGroup">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Masukkan email">
+                    <small id="errorEmail"></small>
+                </div>
+                <!-- Satu kelompok input -->
+                <div class="inputGroup">
+                    <label for="password">Password</label>
+                    <div class="kotakPassword">
+                        <input type="password" id="password" placeholder="Masukkan password">
+                        <button type="button" id="tombolPassword">Lihat</button>
+                    </div>
+                    <small id="errorPassword"></small>
+                </div>
+                <p id="pesanSignin" class="pesan"></p>
+                <button type="submit" class="tombolMasuk">Sign In</button>
+            </form>
+            <p class="akunBaru">Belum punya akun? <a href="signup.html">Sign Up</a></p>
+        </section>
+    </main>
+    <!-- JavaScript untuk proses sign in -->
+    <script src="js/signin.js"></script>
+</body>
+
+</html>
